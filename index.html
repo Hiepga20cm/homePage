@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/public/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Bluecyber Company</title>
+  </head>
+  <body class="font-exo">
+    <header
+      class="min-h-screen flex flex-col text-bc-text w-full mx-auto bg-bc-primary"
+    >
+      <nav class="bc-navbar bg-inherit" id="navbar">
+        <a
+          href="#"
+          class="flex flex-row justify-center items-center font-exo text-center text-2xl font-bold leading-6 basis-1/6"
+          id="bc-logo"
+        >
+          Blue<span
+            class="font-exo mx-0.5 bg-bc-text text-bc-primary rounded-sm"
+            >C</span
+          >yber
+        </a>
+        <div class="md:hidden md:order-5 flex justify-center items-center">
+          <button class="bc-navbar-burger" id="nav-open">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="3"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden md:inline-block md:w-auto basis-4/6">
+          <ul
+            class="menu flex justify-center items-center text-sm font-semibold h-full"
+          >
+            <li class="bc-nav-item">
+              <a href="#">Trang chủ</a>
+            </li>
+            <li class="bc-nav-item"><a href="#about">Giới thiệu</a></li>
+            <li class="bc-nav-item"><a href="#services">Dịch vụ</a></li>
+            <li class="bc-nav-item"><a href="#portofolio">Sản phẩm</a></li>
+            <li class="bc-nav-item"><a href="#contact">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="action md:inline-block hidden basis-1/6"></div>
+
+        <div class="bc-mobile-navbar" id="mobile-navbar">
+          <ul class="">
+            <li>
+              <button id="nav-close">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="3"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li class="bc-nav-item text-center"><a href="#">Home</a></li>
+            <li class="bc-nav-item text-center"><a href="#about">About</a></li>
+            <li class="bc-nav-item text-center">
+              <a href="#services">Services</a>
+            </li>
+            <li class="bc-nav-item text-center">
+              <a href="#services">Portofolio</a>
+            </li>
+            <li class="bc-nav-item text-center">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container mx-auto mt-[60px]">
+        <div class="mx-auto mt-10 mb-8 -z-50">
+          <h1 class="y-3 lg:text-5xl text-2xl font-bold text-center">
+            BlueCyber
+          </h1>
+          <h2 class="text-center font-bold lg:text-5xl text-2xl ani">
+            Ngăn chặn rủi ro không gian mạng
+          </h2>
+        </div>
+        <div
+          class="cover block md:flex md:flex-row gap-7 md:h-[700px] relative"
+        >
+          <div class="basis-3/4 rounded-[32px] overflow-hidden h-5/6 relative">
+            <img
+              src="./assets/img/IMG_6406.jpg"
+              class="object-cover w-full h-full  md:hover:scale-105 hover:brightness-75 transition-all duration-700 ease-in-out"
+              id="cover"
+            />
+            <div
+              class="md:block hidden h-[32px] w-[32px] absolute top-[318px] right-0 overflow-hidden after:absolute after:w-[64px] after:h-[64px] after:rounded-full after:right-[-100px] after:bottom-[-100px] after:box-content after:border-[100px] after:border-bc-primary"
+            ></div>
+          </div>
+          <div
+            class="basis-1/4 h-3/6 rounded-[32px] overflow-hidden hidden md:block"
+          >
+            <img
+              src="https://i.kym-cdn.com/photos/images/newsfeed/001/562/655/8fa.jpg"
+              alt="#"
+              class="object-cover w-full h-full  md:hover:scale-105 hover:brightness-75 transition duration-700 ease-in-out cursor-pointer"
+              id="sub-cover"
+            />
+          </div>
+          <div
+            class="absolute right-0 bottom-0 flex md:w-1/2 lg:w-1/3 h-3/6 bg-bc-primary"
+          >
+            <div
+              class="md:block hidden h-[32px] w-[32px] absolute bottom-[116.7px] left-[-32px] overflow-hidden after:absolute after:w-[64px] after:h-[64px] after:rounded-full after:right-[-100px] after:bottom-[-100px] after:box-content after:border-[100px] after:border-bc-primary"
+            ></div>
+            <a
+              class="bc-btn absolute -translate-x-1/2 -translate-y-1/2 p-6 top-0 left-1/2 md:left-0"
+              href="#about"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="5"
+                stroke="currentColor"
+                class="w-7 h-7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                />
+              </svg>
+            </a>
+            <!-- Menu div lồn xộn -->
+            <div class="flex lg:block flex-wrap items-center relative mx-5">
+              <div class="bc-services-item bg-bc-red lg:bottom-0 lg:left-2">
+                Penetration Testing
+              </div>
+              <div
+                class="bc-services-item bg-yellow-300 lg:bottom-[56px] lg:left-[16px] lg:origin-bottom-left lg:-rotate-12"
+              >
+                Vulnerabilites Accessment
+              </div>
+              <div
+                class="bc-services-item bg-green-700 lg:bottom-[115px] lg:left-[24px] lg:origin-bottom-left lg:-rotate-26"
+              >
+                Malware Cleanup
+              </div>
+              <div
+                class="bc-services-item bg-cyan-400 lg:bottom-0 lg:left-[220px] lg:origin-bottom-right lg:rotate-14"
+              >
+                System Hardening
+              </div>
+              <div
+                class="bc-services-item bg-indigo-600 lg:bottom-[174px] lg:left-[206px] lg:origin-bottom-left lg:rotate-24"
+              >
+                Security Consulting
+              </div>
+              <div
+                class="bc-services-item bg-stone-600 lg:bottom-[150px] lg:left-[145px] lg:origin-bottom-right lg:rotate-35"
+              >
+                Trainning
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="h-screen -z-10">
+      <section id="about" class="wow fadeInUp">
+        <div class="flex container m-auto mt-16">
+          <div style="width: 50%; padding-right: 100px">
+            <p
+              style="
+                font-size: 48px;
+                font-weight: 600;
+                width: 500px;
+                line-height: 1.15;
+                margin-bottom: 30px;
+              "
+            >
+              Sứ mệnh
+            </p>
+            <p style="margin-bottom: 15px">
+              Chúng tôi cung cấp các dịch vụ an toàn thông tin chuyên nghiệp và
+              đa dạng như đánh giá rủi ro an ninh thông tin, kiểm tra thâm nhập,
+              bảo mật ứng dụng và hệ thống, quản lý chứng chỉ số, giám sát mạng
+              và phân tích sự cố bảo mật. Chúng tôi sử dụng các phương pháp tiên
+              tiến và công nghệ mới nhất để đảm bảo rằng dữ liệu và thông tin
+              của khách hàng được bảo vệ một cách tối đa.
+            </p>
+
+            <p>
+              Ngoài ra, chúng tôi cũng cung cấp các khóa đào tạo và huấn luyện
+              về an toàn thông tin để giúp khách hàng nâng cao hiểu biết và kỹ
+              năng trong lĩnh vực này. Chúng tôi cam kết mang đến các dịch vụ an
+              toàn thông tin tốt nhất, giúp khách hàng yên tâm và tập trung vào
+              các hoạt động kinh doanh chính của mình.
+            </p>
+            <!-- <button
+              style="
+                margin: 20px 0;
+                padding: 10px 32px;
+                border-radius: 50px;
+                background: #1d63dc;
+                color: #fff;
+                font-weight: 500;
+                font-size: 16px;
+              "
+            >
+              Learn more
+            </button> -->
+          </div>
+          <div style="width: 50%; height: 500px">
+            <img
+              src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+              alt="#"
+              class="object-cover w-full h-full  md:hover:scale-105 hover:brightness-75 transition duration-700 ease-in-out cursor-pointer"
+              id="sub-cover"
+            />
+          </div>
+        </div>
+      </section>
+      <div class="description">
+        <div class="text-des"></div>
+        <div class="picture-des"></div>
+      </div>
+      <div class="container" style="width: 100%; margin: 100px auto">
+        <div id="services" style="display: flex; justify-content: space-between">
+          <p
+            style="
+              font-size: 48px;
+              font-weight: 600;
+              line-height: 1.15;
+              margin-bottom: 30px;
+            "
+          >
+            Dịch vụ tiêu biểu
+          </p>
+          <!-- <p style="width: 450px">
+            THe standard chunk of Lorem ifsum used since the lock reproduced
+            below
+          </p> -->
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+          <div class="core-service flex gap-5">
+            <p
+              style="
+                font-size: 48px;
+                font-weight: 600;
+                line-height: 1.15;
+                margin-bottom: 30px;
+                color: black;
+                -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
+              "
+            >
+              01
+            </p>
+            <div
+              style="
+                border-top: 1px solid black;
+                margin-top: 25px;
+                width: 80%;
+                padding-top: 10px;
+              "
+            >
+              <p
+                style="
+                  font-size: 20px;
+                  font-weight: 550;
+                  line-height: 1.15;
+                  margin-bottom: 5px;
+                "
+              >
+                Penetration Testing
+              </p>
+              Kiểm tra toàn diện ứng dụng web, xác định các lỗ hổng bảo mật bằng
+              cách rà quét trong hệ thống.
+            </div>
+          </div>
+          <div class="core-service flex gap-5">
+            <p
+              style="
+                font-size: 48px;
+                font-weight: 600;
+                line-height: 1.15;
+                margin-bottom: 30px;
+                color: black;
+                -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
+              "
+            >
+              02
+            </p>
+            <div
+              style="
+                border-top: 1px solid black;
+                margin-top: 25px;
+                width: 80%;
+                padding-top: 10px;
+              "
+            >
+              <p
+                style="
+                  font-size: 20px;
+                  font-weight: 550;
+                  line-height: 1.15;
+                  margin-bottom: 5px;
+                "
+              >
+                Malware Cleanup
+              </p>
+              Dịch vụ làm sạch mã độc giúp các tổ chức, doanh nghiệp rà soát
+              phần mềm độc hại cho các máy chủ, máy trạm.
+            </div>
+          </div>
+          <div class="core-service flex gap-5">
+            <p
+              style="
+                font-size: 48px;
+                font-weight: 600;
+                line-height: 1.15;
+                margin-bottom: 30px;
+                color: black;
+                -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
+              "
+            >
+              03
+            </p>
+            <div
+              style="
+                border-top: 1px solid black;
+                margin-top: 25px;
+                width: 80%;
+                padding-top: 10px;
+              "
+            >
+              <p
+                style="
+                  font-size: 20px;
+                  font-weight: 550;
+                  line-height: 1.15;
+                  margin-bottom: 5px;
+                "
+              >
+                Security Consulting
+              </p>
+              Dịch vụ tư vấn an toàn thông tin, đáp ứng theo các chuẩn của Bộ
+              thông tin truyền thông, ngân hàng nhà nước, ISO, PCI-DSS,...
+            </div>
+          </div>
+          <div class="core-service flex gap-5">
+            <p
+              style="
+                font-size: 48px;
+                font-weight: 600;
+                line-height: 1.15;
+                margin-bottom: 30px;
+                color: black;
+                -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
+              "
+            >
+              04
+            </p>
+            <div
+              style="
+                border-top: 1px solid black;
+                margin-top: 25px;
+                width: 80%;
+                padding-top: 10px;
+              "
+            >
+              <p
+                style="
+                  font-size: 20px;
+                  font-weight: 550;
+                  line-height: 1.15;
+                  margin-bottom: 5px;
+                "
+              >
+                Vulnerabilites Accessment
+              </p>
+              Dịch vụ rà quét toàn diện, chỉ ra các điểm yếu trong tổ chức,
+              trong hệ thống.
+            </div>
+          </div>
+          <div class="core-service flex gap-5">
+            <p
+              style="
+                font-size: 48px;
+                font-weight: 600;
+                line-height: 1.15;
+                margin-bottom: 30px;
+                color: black;
+                -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
+              "
+            >
+              05
+            </p>
+            <div
+              style="
+                border-top: 1px solid black;
+                margin-top: 25px;
+                width: 80%;
+                padding-top: 10px;
+              "
+            >
+              <p
+                style="
+                  font-size: 20px;
+                  font-weight: 550;
+                  line-height: 1.15;
+                  margin-bottom: 5px;
+                "
+              >
+                System Hardening
+              </p>
+              Dịch vụ thiết lập an toàn thông tin cho các hệ thống theo tiêu
+              chuẩn.
+            </div>
+          </div>
+          <div class="core-service flex gap-5">
+            <p
+              style="
+                font-size: 48px;
+                font-weight: 600;
+                line-height: 1.15;
+                margin-bottom: 30px;
+                color: black;
+                -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
+              "
+            >
+              06
+            </p>
+            <div
+              style="
+                border-top: 1px solid black;
+                margin-top: 25px;
+                width: 80%;
+                padding-top: 10px;
+              "
+            >
+              <p
+                style="
+                  font-size: 20px;
+                  font-weight: 550;
+                  line-height: 1.15;
+                  margin-bottom: 5px;
+                "
+              >
+                Trainning
+              </p>
+              Cung cấp các kiến thức cơ bản và chuyên sâu về ATTT, hỗ trợ doanh
+              nghiệp phát triển nguồn lực ATTT và nâng cao chất lượng ATTT tại
+              doanh nghiệp.
+            </div>
+          </div>
+        </div>
+        <div class="mt-32">
+        <div class=" w-[100%] m-auto border-y  border-black">
+          <div class="mySwiper swiper ">
+            <!-- <div class="flex items-center justify-center text-[46px] font-[300]" >Được tin tưởng bởi nhiều tổ chức lớn</div> -->
+            <div class="swiper-wrapper flex justify-between items-center justify-center">
+                <img
+                  class="w-36 h-auto pt[40px]"
+                  src="./assets/img/clients/viettel.png"
+                  alt="#"
+                />
+                <img
+                  class="h-auto"
+                  style="width: 8rem; padding-top: 30px"
+                  src="./assets/img/clients/kiu.png"
+                  alt="#"
+                />
+                <img
+                  class="h-auto"
+                  style="width: 8rem; padding-top: 0"
+                  src="./assets/img/clients/seshin.png"
+                  alt="#"
+                />
+                <img
+                  class="h-auto"
+                  style="width: 10rem; padding-top: 30px"
+                  src="./assets/img/clients/viettelicd.png"
+                  alt="#"
+                />
+                <img
+                  class="h-auto"
+                  style="width: 6rem; padding-top: 12px"
+                  src="./assets/img/clients/dongdo.png"
+                  alt="#"
+                />
+                <img
+                  class="h-auto"
+                  style="width: 6rem; padding-top: 12px"
+                  src="./assets/img/clients/hitaco.png"
+                  alt="#"
+                />
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </span>
+    <div>
+      <div id="portofolio" class="text-[32px] uppercase text-center relative pb-[15px]">Sản Phẩm</div>
+      <div class="flex row-auto ">
+        <div class="flex-grow-0 flex-shrink-0 basis-full max-w-full">
+          <ul class="flex mt-[5px] mr-0 ml-0 mb-[5px] text-center justify-center ">
+            <li class=" bg-cyan-400 cursor-pointer mt-[15px] pt-[10px] pr-[20px] pb-[10px] pl-[20px] text-12px uppercase rounded-md">
+              All
+            </li>
+          </ul>
+        </div>
+      </div>
+          <div class="flex items-center relative h-[450px] justify-center text-center">
+            <div class="items-center text-center left-0 top-0 visible  ">
+              <div class="max-w-[600px]">
+                <figure class="bg-black relative ">
+                  <img src="./assets/img/bluepam.png" class="h-auto max-w-[100%] box-border align-middle">
+                </figure>
+                <div class="text-center p-[25px] bg-white text-black ">
+                  <h4 class="text-[28px] font-[700] mb-[10px] pb-0">
+                    <a href="#">BluePam</a>
+                  </h4>
+                  <p class="p-0 m-0 font-[500] text-[14px] uppercase">Privileged Access Management</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+    <footer
+      class="min-h-screen flex flex-col text-black w-full mx-auto bg-bc-footer "
+    >
+      <div>
+        <div class="mx-auto mt-10 mb-8 -z-50">
+          <h1 class=" lg:text-5xl mt-45 font-bold text-center mb-[10px]">
+            Chất lượng nhân lực
+          </h1>
+          <h3 class=" text-sm text-center">
+            Với đội ngũ nhân viên có kinh nghiệm nhiều năm trong lĩnh vực an toàn thông tin
+          </h3>
+          <h3 class=" text-center text-sm">
+            Chúng tôi đảm bảo mang đến khách hàng những dịch vụ tốt nhất
+          </h3>
+        </div>
+
+        <div
+          id="carouselExampleCaptions"
+          class="relative mb-56"
+          data-te-carousel-init
+          data-te-carousel-slide
+        >
+          <!--Carousel indicators-->
+          <div
+            class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] -mb-6 flex list-none justify-center p-0 "
+            data-te-carousel-indicators
+          >
+            <button
+              type="button"
+              data-te-target="#carouselExampleCaptions"
+              data-te-slide-to="0"
+              data-te-carousel-active
+              class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-black bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-te-target="#carouselExampleCaptions"
+              data-te-slide-to="1"
+              class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-black bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-te-target="#carouselExampleCaptions"
+              data-te-slide-to="2"
+              class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-black bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+
+          <!--Carousel items-->
+          <div
+            class="relative w-full overflow-hidden after:clear-both after:block after:content-['']"
+          >
+            <!--First item-->
+            <div
+              class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+              data-te-carousel-active
+              data-te-carousel-item
+              style="backface-visibility: hidden"
+            >
+              <div class="flex flex-col justify-center items-center card-image">
+                <img
+                  src="./assets/img/clients/z4335738274854_b2d455e6bd6306144b8a707eadfc93fa.jpg"
+                  alt="#"
+                  class="w-60 h-60 rounded-lg bg-clip-padding block"
+                />
+                <h3 class="text-black mt-1 text-xl">Sơn DK</h4>
+                <h4 class="mt-0 text-sm">An toàn thông tin</h4>
+                <h4 class="mt-1 text-sm">Để đạt được thành công, một người cần có cả tài năng và nỗ lực. Tài năng sẽ giúp</h4>
+                  <h4 class="mt-1 text-sm"> cho người đó bắt đầu và tiến bộ nhanh hơn trong lĩnh vực của mình, trong khi nỗ lực sẽ giúp cho người đó vượt </h4>
+                  <h4 class="mt-1 text-sm"> qua những khó khăn và đạt được mục tiêu của mình </h4>
+              </div>
+             
+           
+            </div>
+            <!--Second item-->
+            <div
+              class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+              data-te-carousel-item
+              style="backface-visibility: hidden"
+            >
+            <div class="flex flex-col justify-center items-center card-image">
+              <img
+                src="./assets/img/IMG_6400.jpg"
+                alt="#"
+                class="w-60 h-60 rounded-lg bg-clip-padding block"
+              />
+              <h3 class="text-black mt-1 text-xl">Lê Ích Dương</h4>
+              <h4 class="mt-0 text-sm">Chuyên gia an toàn thông tin</h4>
+              <h4 class="mt-1 text-sm">Để đạt được thành công, một người cần có cả tài năng và nỗ lực. Tài năng sẽ giúp</h4>
+              <h4 class="mt-1 text-sm"> cho người đó bắt đầu và tiến bộ nhanh hơn trong lĩnh vực của mình, trong khi nỗ lực sẽ giúp cho người đó vượt </h4>
+              <h4 class="mt-1 text-sm"> qua những khó khăn và đạt được mục tiêu của mình </h4>
+            </div>
+            </div>
+            <!--Third item-->
+            <div
+              class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+              data-te-carousel-item
+              style="backface-visibility: hidden"
+            >
+            <div class="flex flex-col justify-center items-center card-image">
+              <img
+                src="https://yt3.googleusercontent.com/LUoh08iisbN89KtWeT6l3FKnAs5F2gaz65MTa7IcpAxFngcM_gAIDf7sVVS9ekZpGFzsvYgNRR0=s176-c-k-c0x00ffffff-no-rj"
+                alt="#"
+                class="w-60 h-60 rounded-lg bg-clip-padding block"
+              />
+              <h3 class="text-black mt-1 text-xl">Nguyễn Văn Hiệp</h4>
+              <h4 class="mt-0 text-sm">An toàn thông tin</h4>
+              <h4 class="mt-1 text-sm">Để đạt được thành công, một người cần có cả tài năng và nỗ lực. Tài năng sẽ giúp</h4>
+              <h4 class="mt-1 text-sm"> cho người đó bắt đầu và tiến bộ nhanh hơn trong lĩnh vực của mình, trong khi nỗ lực sẽ giúp cho người đó vượt </h4>
+              <h4 class="mt-1 text-sm"> qua những khó khăn và đạt được mục tiêu của mình </h4>
+            </div>
+            </div>
+          </div>
+
+          <!--Carousel controls - prev item-->
+          <button
+            class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-black opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+            type="button"
+            data-te-target="#carouselExampleCaptions"
+            data-te-slide="prev"
+          >
+            <span class="inline-block h-8 w-8">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                />
+              </svg>
+            </span>
+            <span
+              class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+              >Previous</span
+            >
+          </button>
+          <!--Carousel controls - next item-->
+          <button
+            class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+            type="button"
+            data-te-target="#carouselExampleCaptions"
+            data-te-slide="next"
+          >
+            <span class="inline-block h-8 w-8">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </span>
+            <span
+              class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+              >Next</span
+            >
+          </button>
+        </div>
+       
+        <div class="information bg-gradient-to-b from-bc-mint to-bc-text pt-8 pb-10 h-[240px] relative drop-shadow-xl border-t border-info-200 " id="contact">
+          <div class="flex justify-center items-center py-16 border-solid border-white bg-bc-primary absolute rounded-3xl bottom-1/2 left-1/2 -translate-x-1/2">
+            <div class="flex flex-col bg-bc-yellow justify-center items-center  text-white rounded-[20px] w-128  "  >
+              <h1 class="lg:text-4xl font-medium text-center">
+                  Hãy liên hệ với chúng tôi
+              </h1>
+                  <h2 class="my-4 font-thin w-90 text-center">
+                    Chúng tôi hiểu rằng an toàn thông tin là một vấn đề quan trọng và cấp bách, vì vậy chúng tôi sẵn sàng phục vụ 
+                    khách hàng của mình 
+                  </h2>
+           
+                  <form class=" flex flex-row border border-white rounded-[25px] w-85 h-12 justify-center items-center overflow-hidden pl-2 pr-1">
+                      <input name="email" type="text" placeholder="Enter your email address" class="placeholder:text-white focus:outline-none bg-bc-yellow w-4/5 h-full"/>
+                      <button class="text-bc-primary text-center bg-white rounded-[25px] h-10 w-1/5">Contact us</button>
+                  </form>
+          </div>
+  
+        </div>
+          <div class="flex flex-row container mx-auto mt-32">
+            <div class="basis-1/4">
+              <h1>Email</h1>
+             <p> <a href="mailto:contact@bluecyber.vn">contact@bluecyber.vn</a></p>
+            </div>
+            <div class="basis-1/4">
+              <h1>Phone</h1>
+              <p><a href="tel:+4733378901">+47 333 78 901</a></p>
+            </div>
+            <div class="basis-1/4">
+              <h1>Address</h1>
+              <a href="https://www.google.com/maps/place/T%C3%B2a+nh%C3%A0+Kim+%C3%81nh/@21.0316611,105.7831278,18.52z/data=!4m15!1m8!3m7!1s0x3135ab4b3f7dca59:0x40eba4888f2cd814!2zTmfDtSA3OCBEdXkgVMOibiwgROG7i2NoIFbhu41uZyBI4bqtdSwgQ-G6p3UgR2nhuqV5LCBIw6AgTuG7mWksIFZp4buHdCBOYW0!3b1!8m2!3d21.0326451!4d105.7833219!16s%2Fg%2F1jkyv2bx9!3m5!1s0x3135abfe95ba0d93:0x8ab9e245cb41e1f0!8m2!3d21.0320335!4d105.7832347!16s%2Fg%2F11q9cqlpqw">
+                Số 1, ngõ 78, Duy Tân, Dịch Vọng Hậu, Cầu Giấy, Hà Nội
+              </a>
+            </div>
+            <div class="flex basis-1/4 flex-row">
+              <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 basis-1/3"
+                  fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 basis-1/3"
+                fill="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 basis-1/3"
+                fill="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 5,
+      spaceBetween: 20,
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        // when window width is >= 480px
+        480: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        // when window width is >= 640px
+        640: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+      },
+      // autoplay: {
+      //   delay: 250,
+      //   disableOnInteraction: false,
+      // },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+  <script>
+    const navbar = document.querySelector("nav");
+    
+    // Function to toggle the 'scrolled' class on the navbar
+    const mobileNav = document.getElementById("mobile-navbar");
+    // thay đổi cover ảnh liên tục
+    const images = [
+      "./assets/img/IMG_6402.jpg",
+      "./assets/img/IMG_6408.jpg",
+      "./assets/img/IMG_6393.jpg",
+    ];
+    let index = 0;
+    setInterval(function () {
+      var img = document.getElementById("cover");
+      var subImg = document.getElementById("sub-cover");
+      gsap.to(img, 0.5, {
+        opacity: 0,
+        onComplete: function () {
+          img.src = images[index];
+          index = (index + 1) % images.length;
+          subImg.src = images[index];
+          gsap.to(img, 0.5, { opacity: 1 });
+        },
+      });
+    }, 5000);
+    // Handle đóng mở menu mobile
+    const openNav = document
+      .getElementById("nav-open")
+      .addEventListener("click", function () {
+        mobileNav.classList.toggle("hidden");
+      });
+    const closeNav = document
+      .getElementById("nav-close")
+      .addEventListener("click", function () {
+        mobileNav.classList.toggle("hidden");
+      });
+    const toggleNavbar = () => {
+      if (window.scrollY > 0) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    };
+
+    // Event listener for scroll events
+    window.addEventListener("scroll", toggleNavbar);
+  </script>
+</html>
