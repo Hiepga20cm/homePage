@@ -625,6 +625,18 @@ nav.scrolled a span {
   }
 }
 
+@media (min-width: 1590px) {
+  .container {
+    max-width: 1590px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1920px;
+  }
+}
+
 .bc-nav-item {
   box-sizing: border-box;
   padding: 0.25rem;
@@ -2541,6 +2553,11 @@ nav.scrolled a span {
 .py-\[5px\] {
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .pb-0 {
