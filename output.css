@@ -619,6 +619,12 @@ nav.scrolled a span {
   }
 }
 
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .bc-nav-item {
   box-sizing: border-box;
   padding: 0.25rem;
@@ -4551,6 +4557,10 @@ nav.scrolled a span {
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-screen {
+    width: 100vw;
   }
 
   .md\:flex-row {
