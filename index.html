@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
+    <link href="/public/output.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,16 +14,22 @@
       href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Bluecyber Company</title>
   </head>
   <body class="font-exo">
     <header
-      class="min-h-screen flex flex-col text-bc-text w-full mx-auto bg-bc-primary"
+      id="home" class="min-h-screen flex flex-col text-bc-text w-full mx-auto bg-bc-primary"
     >
       <nav class="bc-navbar bg-inherit" id="navbar">
         <a
-          href="#"
-          class="flex flex-row justify-center items-center font-exo text-center text-2xl font-bold leading-6 basis-1/6"
+          class="flex flex-row justify-center items-center font-exo text-center text-2xl font-bold leading-6 basis-1/6 cursor-pointer"
+          onclick="scrollToSection('#home')"
           id="bc-logo"
         >
           Blue<span
@@ -53,13 +59,13 @@
           <ul
             class="menu flex justify-center items-center text-sm font-semibold h-full"
           >
-            <li class="bc-nav-item">
-              <a href="#">Trang chủ</a>
+            <li class="bc-nav-item  ">
+              <a  class="cursor-pointer" onclick="scrollToSection('#home')" >Trang chủ</a>
             </li>
-            <li class="bc-nav-item"><a href="#about">Giới thiệu</a></li>
-            <li class="bc-nav-item"><a href="#services">Dịch vụ</a></li>
-            <li class="bc-nav-item"><a href="#portofolio">Sản phẩm</a></li>
-            <li class="bc-nav-item"><a href="#contact">Liên hệ</a></li>
+            <li class="bc-nav-item"><a class="scroll-smooth cursor-pointer" onclick="scrollToSection('#about')">Giới thiệu</a></li>
+            <li class="bc-nav-item"><a  class="scroll-smooth cursor-pointer" onclick="scrollToSection('#services')">Dịch vụ</a></li>
+            <li class="bc-nav-item"><a  class="scroll-smooth cursor-pointer" onclick="scrollToSection('#product')">Sản phẩm</a></li>
+            <li class="bc-nav-item"><a  class="scroll-smooth cursor-pointer" onclick="scrollToSection('#contact')">Liên hệ</a></li>
           </ul>
         </div>
         <div class="action md:inline-block hidden basis-1/6"></div>
@@ -90,7 +96,7 @@
               <a href="#services">Services</a>
             </li>
             <li class="bc-nav-item text-center">
-              <a href="#services">Portofolio</a>
+              <a href="#product">Product</a>
             </li>
             <li class="bc-nav-item text-center">
               <a href="#contact">Contact</a>
@@ -99,8 +105,8 @@
         </div>
       </nav>
 
-      <div class="container md:w-screen mx-auto mt-[60px] px-5">
-        <div class="mx-auto mt-10 mb-8 -z-50">
+      <div id="element1" class="container md:w-screen mx-auto mt-[60px] lg:px-5 md:px-4">
+        <div class="mx-auto mt-10 mb-8 -z-50 ">
           <h1 class="y-3 lg:text-5xl text-2xl font-bold text-center">
             BlueCyber
           </h1>
@@ -127,16 +133,19 @@
             <img
               src="https://i.kym-cdn.com/photos/images/newsfeed/001/562/655/8fa.jpg"
               alt="#"
-              class="object-cover w-full h-full  md:hover:scale-105 hover:brightness-75 transition duration-700 ease-in-out cursor-pointer"
+              class="object-cover w-full h-full  md:hover:scale-105 hover:brightness-75 transition duration-700 ease-in-out cursor-pointer  "
               id="sub-cover"
             />
           </div>
           <div
-            class="absolute right-0 bottom-0 flex md:w-1/2 lg:w-1/3 h-3/6 bg-bc-primary"
+            class="absolute right-0 bottom-0 flex md:w-0.45 lg:w-[50%] xl:w-[45%] h-[50%]  bg-bc-primary"
           >
+            <!-- <div
+              class="md:block hidden h-[35%] w-auto absolute bottom-[116.7px] left-[-32%] overflow-hidden after:absolute after:w-[64px] after:h-[64px] after:rounded-full after:right-[-100px] after:bottom-[-100px] after:box-content after:border-[100px] after:border-bc-primary"
+            ></div> -->
             <div
-              class="md:block hidden h-[32px] w-[32px] absolute bottom-[116.7px] left-[-32px] overflow-hidden after:absolute after:w-[64px] after:h-[64px] after:rounded-full after:right-[-100px] after:bottom-[-100px] after:box-content after:border-[100px] after:border-bc-primary"
-            ></div>
+            class="md:block hidden h-[32px] w-[32px] absolute bottom-[116.7px] left-[-32px] overflow-hidden after:absolute after:w-[64px] after:h-[64px] after:rounded-full after:right-[-100px] after:bottom-[-100px] after:box-content after:border-[100px] after:border-bc-primary"
+          ></div>
             <a
               class="bc-btn absolute -translate-x-1/2 -translate-y-1/2 p-6 top-0 left-1/2 md:left-0"
               href="#about"
@@ -157,32 +166,32 @@
               </svg>
             </a>
             <!-- Menu div lồn xộn -->
-            <div class="flex lg:block flex-wrap items-center relative mx-5">
-              <div class="bc-services-item bg-bc-red lg:bottom-0 lg:left-2">
+            <div id="element3" class="flex lg:block  flex-wrap items-center relative mx-[5%]">
+              <div class="bc-services-item bg-bc-red lg:bottom-0 lg:left-2 md:bottom-auto hover:animate-bounce">
                 Penetration Testing
               </div>
               <div
-                class="bc-services-item bg-yellow-300 lg:bottom-[56px] lg:left-[16px] lg:origin-bottom-left lg:-rotate-12 "
+                class="bc-services-item bg-yellow-300 lg:bottom-[80px] lg:left-[16px] lg:origin-bottom-left lg:-rotate-12  hover:scale-110"
               >
                 Vulnerabilites Accessment
               </div>
               <div
-                class="bc-services-item bg-green-700 lg:bottom-[115px] lg:left-[24px] lg:origin-bottom-left lg:-rotate-26"
+                class="bc-services-item bg-green-700 lg:bottom-[50%] lg:left-[24px] lg:origin-bottom-left lg:-rotate-26  hover:scale-110"
               >
                 Malware Cleanup
               </div>
               <div
-                class="bc-services-item bg-cyan-400 lg:bottom-0 lg:left-[220px] lg:origin-bottom-right lg:rotate-14"
+                class="bc-services-item bg-cyan-400 lg:bottom-0 lg:left-[300px] lg:origin-bottom-right lg:rotate-14  hover:scale-110"
               >
                 System Hardening
               </div>
               <div
-                class="bc-services-item bg-indigo-600 lg:bottom-[174px] lg:left-[206px] lg:origin-bottom-left lg:rotate-24"
+                class="bc-services-item bg-indigo-600 lg:bottom-[174px] lg:left-[270px] lg:origin-bottom-left lg:rotate-24  hover:scale-110"
               >
                 Security Consulting
               </div>
               <div
-                class="bc-services-item bg-stone-600 lg:bottom-[150px] lg:left-[145px] lg:origin-bottom-right lg:rotate-35"
+                class="bc-services-item bg-stone-600 lg:bottom-[260px] lg:left-[240px] lg:origin-bottom-right lg:-rotate-12  hover:scale-110"
               >
                 Trainning
               </div>
@@ -192,17 +201,56 @@
       </div>
     </header>
     <main class="h-screen -z-10">
-      <section id="about" class="wow fadeInUp">
-        <div class="flex container mx-auto m-auto mt-16 px-5">
-          <div style="width: 50%; padding-right: 100px">
+      <div class="container mx-auto">
+        <div class="w-[100%] mt-[3rem] lg:px-5 md:px-4 ">
+          <div class="swiper mySwiper mt-3">
+            <!-- <div class="flex items-center justify-center text-[46px] font-[300]" >Được tin tưởng bởi nhiều tổ chức lớn</div> -->
+            <div class="swiper-wrapper flex justify-between items-center  ">
+              <div class="swiper-slide "><img
+                  class="h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
+                  src="./assets/img/clients/viettel.png"
+                  alt="#"
+                /></div>  
+               <div class="swiper-slide "><img
+                 class="h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
+                  src="./assets/img/clients/kiu.png"
+                  alt="#"
+                /></div>
+                <div class="swiper-slide"><img
+                 class="h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
+                  src="./assets/img/clients/seshin.png"
+                  alt="#"
+                /></div>
+                 <div class="swiper-slide "><img
+                  class="h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
+                  src="./assets/img/clients/viettelicd.png"
+                  alt="#"
+                /></div>
+                  <div class="swiper-slide"><img
+                 class="h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
+                  src="./assets/img/clients/dongdo.png"
+                  alt="#"
+                /></div>
+                   <div class="swiper-slide"><img
+                  class="h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
+                  src="./assets/img/clients/hitaco.png"
+                  alt="#"
+                /></div>   
+                <div class="swiper-slide"><img
+                class="h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
+                src="./assets/img/clients/vietauctions.png"
+                alt="#"
+              /></div>    
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="wow fadeInUp ">
+        <div id="about" class="flex container mx-auto m-auto mt-16 lg:px-5 md:px-4">
+          
+          <div id="element" class="w-[50%] pr-[100px]">
             <p
-              style="
-                font-size: 48px;
-                font-weight: 600;
-                width: 500px;
-                line-height: 1.15;
-                margin-bottom: 30px;
-              "
+              class="hover:scale-110 cursor-default transition-all duration-300 ease-out text-[48px] w-[500px] leading-[1.15] mb-[30px] font-[600] "
             >
               Sứ mệnh
             </p>
@@ -222,25 +270,12 @@
               toàn thông tin tốt nhất, giúp khách hàng yên tâm và tập trung vào
               các hoạt động kinh doanh chính của mình.
             </p>
-            <!-- <button
-              style="
-                margin: 20px 0;
-                padding: 10px 32px;
-                border-radius: 50px;
-                background: #1d63dc;
-                color: #fff;
-                font-weight: 500;
-                font-size: 16px;
-              "
-            >
-              Learn more
-            </button> -->
           </div>
-          <div style="width: 50%; height: 500px">
+          <div class="w-[50%] h-[500px]">
             <img
               src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
               alt="#"
-              class="object-cover w-full h-full  md:hover:scale-105 hover:brightness-75 transition duration-700 ease-in-out cursor-pointer"
+              class="object-cover w-full h-full  md:hover:scale-105 hover:brightness-75 transition duration-700 ease-in-out cursor-pointer "
               id="sub-cover"
             />
           </div>
@@ -250,15 +285,11 @@
         <div class="text-des"></div>
         <div class="picture-des"></div>
       </div>
-      <div class="container mx-auto px-5" style="width: 100%; margin: 100px auto">
-        <div id="services" style="display: flex; justify-content: space-between">
+      <div id="my-element" class="container mx-auto lg:px-5 md:px-4 w-[100%]" style="  margin: 100px auto">
+        <div  style="display: flex; justify-content: space-between  ">
           <p
-            style="
-              font-size: 48px;
-              font-weight: 600;
-              line-height: 1.15;
-              margin-bottom: 30px;
-            "
+             
+            class="text-[48px] font-[600] leading-1.15 mb-[30px] hover:scale-105 cursor-default transition-all duration-300 ease-out"
           >
             Dịch vụ tiêu biểu
           </p>
@@ -267,7 +298,7 @@
             below
           </p> -->
         </div>
-        <div class="grid grid-cols-3 gap-4">
+        <div id="services" class="grid grid-cols-3 gap-4">
           <div class="core-service flex gap-5">
             <p
               style="
@@ -292,14 +323,9 @@
               "
             >
               <p
-                style="
-                  font-size: 20px;
-                  font-weight: 550;
-                  line-height: 1.15;
-                  margin-bottom: 5px;
-                "
+              class="text-[20px] font-[550] leading-[1.15] mb-[5px]"
               >
-                Penetration Testing
+                Penetration Testing <button class="float-right hover:scale-125"><svg class="h-8 w-8 text-black"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />  <polyline points="15 3 21 3 21 9" />  <line x1="10" y1="14" x2="21" y2="3" /></svg></button>
               </p>
               Kiểm tra toàn diện ứng dụng web, xác định các lỗ hổng bảo mật bằng
               cách rà quét trong hệ thống.
@@ -329,14 +355,9 @@
               "
             >
               <p
-                style="
-                  font-size: 20px;
-                  font-weight: 550;
-                  line-height: 1.15;
-                  margin-bottom: 5px;
-                "
+              class="text-[20px] font-[550] leading-[1.15] mb-[5px]"
               >
-                Malware Cleanup
+                Malware Cleanup <button class="float-right hover:scale-125"><svg class="h-8 w-8 text-black"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />  <polyline points="15 3 21 3 21 9" />  <line x1="10" y1="14" x2="21" y2="3" /></svg></button>
               </p>
               Dịch vụ làm sạch mã độc giúp các tổ chức, doanh nghiệp rà soát
               phần mềm độc hại cho các máy chủ, máy trạm.
@@ -366,15 +387,11 @@
               "
             >
               <p
-                style="
-                  font-size: 20px;
-                  font-weight: 550;
-                  line-height: 1.15;
-                  margin-bottom: 5px;
-                "
+                class="text-[20px] font-[550] leading-[1.15] mb-[5px]"
               >
-                Security Consulting
+                Security Consulting <button class="float-right hover:scale-125"><svg class="h-8 w-8 text-black"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />  <polyline points="15 3 21 3 21 9" />  <line x1="10" y1="14" x2="21" y2="3" /></svg></button>
               </p>
+              
               Dịch vụ tư vấn an toàn thông tin, đáp ứng theo các chuẩn của Bộ
               thông tin truyền thông, ngân hàng nhà nước, ISO, PCI-DSS,...
             </div>
@@ -403,17 +420,12 @@
               "
             >
               <p
-                style="
-                  font-size: 20px;
-                  font-weight: 550;
-                  line-height: 1.15;
-                  margin-bottom: 5px;
-                "
+              class="text-[20px] font-[550] leading-[1.15] mb-[5px]"
               >
-                Vulnerabilites Accessment
+                Vulnerabilites Accessment<button class="float-right hover:scale-125"><svg class="h-8 w-8 text-black"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />  <polyline points="15 3 21 3 21 9" />  <line x1="10" y1="14" x2="21" y2="3" /></svg></button>
               </p>
-              Dịch vụ rà quét toàn diện, chỉ ra các điểm yếu trong tổ chức,
-              trong hệ thống.
+              Dịch vụ rà quét toàn diện, chỉ ra các điểm
+              yếu trong tổ chức và hệ thống.
             </div>
           </div>
           <div class="core-service flex gap-5">
@@ -440,14 +452,9 @@
               "
             >
               <p
-                style="
-                  font-size: 20px;
-                  font-weight: 550;
-                  line-height: 1.15;
-                  margin-bottom: 5px;
-                "
+              class="text-[20px] font-[550] leading-[1.15] mb-[5px]"
               >
-                System Hardening
+                System Hardening <button class="float-right hover:scale-125"><svg class="h-8 w-8 text-black"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />  <polyline points="15 3 21 3 21 9" />  <line x1="10" y1="14" x2="21" y2="3" /></svg></button>
               </p>
               Dịch vụ thiết lập an toàn thông tin cho các hệ thống theo tiêu
               chuẩn.
@@ -477,14 +484,9 @@
               "
             >
               <p
-                style="
-                  font-size: 20px;
-                  font-weight: 550;
-                  line-height: 1.15;
-                  margin-bottom: 5px;
-                "
+              class="text-[20px] font-[550] leading-[1.15] mb-[5px]"
               >
-                Trainning
+                Trainning <button class="float-right hover:scale-125"><svg class="h-8 w-8 text-black"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />  <polyline points="15 3 21 3 21 9" />  <line x1="10" y1="14" x2="21" y2="3" /></svg></button>
               </p>
               Cung cấp các kiến thức cơ bản và chuyên sâu về ATTT, hỗ trợ doanh
               nghiệp phát triển nguồn lực ATTT và nâng cao chất lượng ATTT tại
@@ -492,93 +494,124 @@
             </div>
           </div>
         </div>
-        <div class="mt-32">
-        <div class=" w-[100%] m-auto border-y  border-black">
-          <div class="mySwiper swiper ">
-            <!-- <div class="flex items-center justify-center text-[46px] font-[300]" >Được tin tưởng bởi nhiều tổ chức lớn</div> -->
-            <div class="swiper-wrapper flex justify-between items-center justify-center">
-                <img
-                  class="w-36 h-auto pt[40px]"
-                  src="./assets/img/clients/viettel.png"
-                  alt="#"
-                />
-                <img
-                  class="h-auto"
-                  style="width: 8rem; padding-top: 30px"
-                  src="./assets/img/clients/kiu.png"
-                  alt="#"
-                />
-                <img
-                  class="h-auto"
-                  style="width: 8rem; padding-top: 0"
-                  src="./assets/img/clients/seshin.png"
-                  alt="#"
-                />
-                <img
-                  class="h-auto"
-                  style="width: 10rem; padding-top: 30px"
-                  src="./assets/img/clients/viettelicd.png"
-                  alt="#"
-                />
-                <img
-                  class="h-auto"
-                  style="width: 6rem; padding-top: 12px"
-                  src="./assets/img/clients/dongdo.png"
-                  alt="#"
-                />
-                <img
-                  class="h-auto"
-                  style="width: 6rem; padding-top: 12px"
-                  src="./assets/img/clients/hitaco.png"
-                  alt="#"
-                />
-            </div>
-          </div>
-        </div>
-      </div>
+        
       </div>
     </span>
-    <div>
-      <div id="portofolio" class="text-[32px] uppercase text-center relative pb-[15px]">Sản Phẩm</div>
-      <div class="flex row-auto ">
-        <div class="flex-grow-0 flex-shrink-0 basis-full max-w-full">
-          <ul class="flex mt-[5px] mr-0 ml-0 mb-[5px] text-center justify-center ">
-            <li class=" bg-cyan-400 cursor-pointer mt-[15px] pt-[10px] pr-[20px] pb-[10px] pl-[20px] text-12px uppercase rounded-md">
+    <div id="element2" class="bg-bc-primary  ">
+    <div  class="container mx-auto lg:px-5 md:px-4 py-[3.5%] ">
+      <div  style="display: flex; justify-content: space-between ">
+          <p
+            class="text-[55px] font-[600] leading-1.15 mb-[30px] text-white hover:scale-110 cursor-default transition-all duration-300 ease-out" 
+          >
+            Sản phẩm
+          </p>
+          <p class="text-white w-[35%] cursor-default">
+            Chúng tôi đặt tất cả tâm huyết vào từng dòng code và tự hào mang đến những sản phẩm chất lượng nhất. 
+          </p>
+      </div>
+      <!--<div class="flex row-auto ">
+         <div class="flex-grow-0 flex-shrink-0 basis-full max-w-full">
+          <ul class="flex mt-[5px] mr-0 ml-0 mb-[5px] text-center ">
+            <li class=" cursor-pointer mt-[15px] pt-[10px] pr-[20px] pb-[10px] pl-[20px] xl:text-[16px] lg:text-[12px] text-white uppercase rounded-md border-solid border-2 border-white hover:scale-125 transition-all duration-300 ease-out">
               All
             </li>
           </ul>
-        </div>
-      </div>
-          <div class="flex items-center relative h-[450px] justify-center text-center">
-            <div class="items-center text-center left-0 top-0 visible  ">
-              <div class="max-w-[600px]">
+        </div> 
+      </div>-->
+          <div   class="flex items-start  relative h-[500px]  text-center ">
+            <div class="items-center text-center left-0 top-0 visible border-solid border-[3px] rounded-sm border-white hover:scale-105 transition-all duration-300 ease-out">
+              <div id="product" class="max-w-[600px]">
                 <figure class="bg-black relative ">
                   <img src="./assets/img/bluepam.png" class="h-auto max-w-[100%] box-border align-middle">
                 </figure>
-                <div class="text-center p-[25px] bg-white text-black ">
+                <div class="text-left p-[25px] bg-white text-black ">
                   <h4 class="text-[28px] font-[700] mb-[10px] pb-0">
                     <a href="#">BluePam</a>
+                    <button class="float-right hover:scale-125"><svg class="h-8 w-8 text-black"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />  <polyline points="15 3 21 3 21 9" />  <line x1="10" y1="14" x2="21" y2="3" /></svg></button>
                   </h4>
                   <p class="p-0 m-0 font-[500] text-[14px] uppercase">Privileged Access Management</p>
                 </div>
               </div>
             </div>
+
+            <div class="flex-col ml-[10%] mt-0">
+             <p class="text-[64px] text-white font-[30px] mb-5 mt-0 cursor-default hover:scale-105 transition-all duration-300 leading-none">Zero trust access</p>
+              <ul >
+                <li  class="mb-3">
+                  <p class="flex items-center text-white cursor-default hover:scale-105 transition-all duretion-300">
+                    <span class="inline-block mr-4">
+                      <svg class="h-8 w-8 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                      </svg>
+                    </span>
+                    Identity Aware Access Proxy
+                  </p>
+                </li>
+
+                <li class="mb-3">
+                  <p class="flex items-center text-white cursor-default hover:scale-105 transition-all duretion-300">
+                    <span class="inline-block mr-4">
+                      <svg class="h-8 w-8 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                      </svg>
+                    </span>
+                    Privileged Access Management
+                  </p>
+                </li>
+
+                <li class="mb-3">
+                  <p class="flex items-center text-white cursor-default hover:scale-105 transition-all duretion-300">
+                    <span class="inline-block mr-4">
+                      <svg class="h-8 w-8 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                      </svg>
+                    </span>
+                    Two-Factor Authentication
+                  </p>
+                </li>
+
+                <li class="mb-3">
+                  <p class="flex items-center text-white cursor-default hover:scale-105 transition-all duretion-300">
+                    <span class="inline-block mr-4">
+                      <svg class="h-8 w-8 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                      </svg>
+                    </span>
+                    Device Hygiene and Context Aware Policies
+                  </p>
+                </li>
+
+                <li class="mb-3">
+                  <p class="flex items-center text-white cursor-default hover:scale-105 transition-all duretion-300">
+                    <span class="inline-block mr-4">
+                      <svg class="h-8 w-8 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                      </svg>
+                    </span>
+                    Web, SSH, RDP, and Database services.
+                  </p>
+                </li>
+
+                
+                
+              </ul>
+            </div>
           </div>
+          
         </div> 
-      </div>
-    </div>
+   </div>
     <footer
-      class="min-h-screen flex flex-col text-black w-full mx-auto bg-bc-footer "
+      class="min-h-screen flex flex-col text-black w-full mx-auto bg-bc-footer my-[2%] "
     >
       <div>
         <div class="mx-auto mt-10 mb-8 -z-50">
-          <h1 class=" lg:text-5xl mt-45 font-bold text-center mb-[10px]">
+          <h1 class=" lg:text-5xl md:text-4xl mt-45 font-bold text-center mb-[10px] hover:scale-110 transition-all duration-300 ease-out cursor-default">
             Chất lượng nhân lực
           </h1>
-          <h3 class=" text-sm text-center">
+          <h3 class=" text-sm text-center hover:scale-110 transition-all duration-300 ease-out cursor-default">
             Với đội ngũ nhân viên có kinh nghiệm nhiều năm trong lĩnh vực an toàn thông tin
           </h3>
-          <h3 class=" text-center text-sm">
+          <h3 class=" text-center text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default">
             Chúng tôi đảm bảo mang đến khách hàng những dịch vụ tốt nhất
           </h3>
         </div>
@@ -634,13 +667,13 @@
                 <img
                   src="./assets/img/clients/z4335738274854_b2d455e6bd6306144b8a707eadfc93fa.jpg"
                   alt="#"
-                  class="w-60 h-60 rounded-lg bg-clip-padding block"
+                  class="w-60 h-60 rounded-lg bg-clip-padding block "
                 />
-                <h3 class="text-black mt-1 text-xl">Sơn DK</h4>
-                <h4 class="mt-0 text-sm">An toàn thông tin</h4>
-                <h4 class="mt-1 text-sm">Để đạt được thành công, một người cần có cả tài năng và nỗ lực. Tài năng sẽ giúp</h4>
-                  <h4 class="mt-1 text-sm"> cho người đó bắt đầu và tiến bộ nhanh hơn trong lĩnh vực của mình, trong khi nỗ lực sẽ giúp cho người đó vượt </h4>
-                  <h4 class="mt-1 text-sm"> qua những khó khăn và đạt được mục tiêu của mình </h4>
+                <h3 class="text-black mt-1 text-xl hover:scale-110 transition-all duration-300 ease-out cursor-default">Sơn DK</h4>
+                <h4 class="mt-0 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default">An toàn thông tin</h4>
+                <h4 class="mt-1 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default">Để đạt được thành công, một người cần có cả tài năng và nỗ lực. Tài năng sẽ giúp</h4>
+                  <h4 class="mt-1 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default"> cho người đó bắt đầu và tiến bộ nhanh hơn trong lĩnh vực của mình, trong khi nỗ lực sẽ giúp cho người đó vượt </h4>
+                  <h4 class="mt-1 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default"> qua những khó khăn và đạt được mục tiêu của mình </h4>
               </div>
              
            
@@ -653,15 +686,15 @@
             >
             <div class="flex flex-col justify-center items-center card-image">
               <img
-                src="./assets/img/IMG_6400.jpg"
+                src="./assets/img/IMG_5036.jpg"
                 alt="#"
                 class="w-60 h-60 rounded-lg bg-clip-padding block"
               />
-              <h3 class="text-black mt-1 text-xl">Lê Ích Dương</h4>
-              <h4 class="mt-0 text-sm">Chuyên gia an toàn thông tin</h4>
-              <h4 class="mt-1 text-sm">Để đạt được thành công, một người cần có cả tài năng và nỗ lực. Tài năng sẽ giúp</h4>
-              <h4 class="mt-1 text-sm"> cho người đó bắt đầu và tiến bộ nhanh hơn trong lĩnh vực của mình, trong khi nỗ lực sẽ giúp cho người đó vượt </h4>
-              <h4 class="mt-1 text-sm"> qua những khó khăn và đạt được mục tiêu của mình </h4>
+              <h3 class="text-black mt-1 text-xl hover:scale-110 transition-all duration-300 ease-out cursor-default">Lê Ích Dương</h4>
+              <h4 class="mt-0 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default">Chuyên gia an toàn thông tin</h4>
+              <h4 class="mt-1 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default">Để đạt được thành công, một người cần có cả tài năng và nỗ lực. Tài năng sẽ giúp</h4>
+              <h4 class="mt-1 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default"> cho người đó bắt đầu và tiến bộ nhanh hơn trong lĩnh vực của mình, trong khi nỗ lực sẽ giúp cho người đó vượt </h4>
+              <h4 class="mt-1 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default"> qua những khó khăn và đạt được mục tiêu của mình </h4>
             </div>
             </div>
             <!--Third item-->
@@ -672,22 +705,24 @@
             >
             <div class="flex flex-col justify-center items-center card-image">
               <img
-                src="https://yt3.googleusercontent.com/LUoh08iisbN89KtWeT6l3FKnAs5F2gaz65MTa7IcpAxFngcM_gAIDf7sVVS9ekZpGFzsvYgNRR0=s176-c-k-c0x00ffffff-no-rj"
+                src="./assets/img/_MG_5006.jpg"
                 alt="#"
                 class="w-60 h-60 rounded-lg bg-clip-padding block"
               />
-              <h3 class="text-black mt-1 text-xl">Nguyễn Văn Hiệp</h4>
-              <h4 class="mt-0 text-sm">An toàn thông tin</h4>
-              <h4 class="mt-1 text-sm">Để đạt được thành công, một người cần có cả tài năng và nỗ lực. Tài năng sẽ giúp</h4>
-              <h4 class="mt-1 text-sm"> cho người đó bắt đầu và tiến bộ nhanh hơn trong lĩnh vực của mình, trong khi nỗ lực sẽ giúp cho người đó vượt </h4>
-              <h4 class="mt-1 text-sm"> qua những khó khăn và đạt được mục tiêu của mình </h4>
+              <h3 class="text-black mt-1 text-xl hover:scale-110 transition-all duration-300 ease-out cursor-default">Nguyễn Văn Hiệp</h4>
+              <h4 class="mt-0 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default">An toàn thông tin</h4>
+              <h4 class="mt-1 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default">Để đạt được thành công, một người cần có cả tài năng và nỗ lực. Tài năng sẽ giúp</h4>
+              <h4 class="mt-1 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default"> cho người đó bắt đầu và tiến bộ nhanh hơn trong lĩnh vực của mình, trong khi nỗ lực sẽ giúp cho người đó vượt </h4>
+              <h4 class="mt-1 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default"> qua những khó khăn và đạt được mục tiêu của mình </h4>
             </div>
             </div>
+
+            
           </div>
 
           <!--Carousel controls - prev item-->
           <button
-            class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-black opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+            class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-black opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-black hover:no-underline hover:opacity-90 hover:outline-none focus:text-black focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
             type="button"
             data-te-target="#carouselExampleCaptions"
             data-te-slide="prev"
@@ -715,7 +750,7 @@
           </button>
           <!--Carousel controls - next item-->
           <button
-            class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+            class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-black opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-black hover:no-underline hover:opacity-90 hover:outline-none focus:text-black focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
             type="button"
             data-te-target="#carouselExampleCaptions"
             data-te-slide="next"
@@ -743,35 +778,35 @@
           </button>
         </div>
        
-        <div class="information bg-gradient-to-b from-bc-mint to-bc-text pt-8 pb-10 h-[240px] relative drop-shadow-xl border-t border-info-200 " id="contact">
-          <div class="container px-5 flex justify-center items-center py-16 border-solid border-white bg-bc-primary absolute rounded-3xl bottom-1/2 left-1/2 -translate-x-1/2">
-            <div class="flex flex-col bg-bc-yellow justify-center items-center  text-white rounded-[20px] w-128  "  >
-              <h1 class="lg:text-4xl font-medium text-center">
+        <div class="information bg-gradient-to-b from-bc-mint to-bc-text pt-8 pb-10 h-[240px] relative drop-shadow-xl border-t border-info-200 lg:px-2" id="contact">
+          <div class="lg:w-[72%] lg:px-5 md:px-4 flex justify-center items-center py-[3%] border-solid border-white bg-bc-primary absolute rounded-3xl bottom-1/2 left-1/2 -translate-x-1/2 ">
+            <div class="container flex flex-col bg-bc-yellow justify-center items-center  text-white rounded-[20px] w-128"  >
+              <h1 class="lg:text-5xl md:text-4xl text-center cursor-default">
                   Hãy liên hệ với chúng tôi
               </h1>
-                  <h2 class="my-4 font-thin w-90 text-center">
+                  <h2 class="my-4 font-thin w-90 text-center cursor-default">
                     Chúng tôi hiểu rằng an toàn thông tin là một vấn đề quan trọng và cấp bách, vì vậy chúng tôi sẵn sàng phục vụ 
                     khách hàng của mình 
                   </h2>
            
                   <form class=" flex flex-row border border-white rounded-[25px] w-85 h-12 justify-center items-center overflow-hidden pl-2 pr-1">
                       <input name="email" type="text" placeholder="Enter your email address" class="placeholder:text-white focus:outline-none bg-bc-yellow w-4/5 h-full"/>
-                      <button class="text-bc-primary text-center bg-white rounded-[25px] h-10 w-1/5">Contact us</button>
+                      <button class="text-bc-primary text-center bg-white rounded-[25px] h-10 w-[30%]  hover:scale-110 transition-all duration-300 ease-out">Contact us</button>
                   </form>
           </div>
   
         </div>
-          <div class="container flex flex-row mx-auto mt-32 px-5">
+          <div class="container flex flex-row mx-auto mt-28 lg:px-5 md:px-4">
             <div class="basis-1/4">
-              <h1>Email</h1>
+              <h1 class="cursor-default">Email</h1>
              <p> <a href="mailto:contact@bluecyber.vn">contact@bluecyber.vn</a></p>
             </div>
             <div class="basis-1/4">
-              <h1>Phone</h1>
+              <h1 class="cursor-default">Phone</h1>
               <p><a href="tel:+4733378901">+47 333 78 901</a></p>
             </div>
-            <div class="basis-1/4">
-              <h1>Address</h1>
+            <div class="basis-1/4 min">
+              <h1 class="cursor-default">Address</h1>
               <a href="https://www.google.com/maps/place/T%C3%B2a+nh%C3%A0+Kim+%C3%81nh/@21.0316611,105.7831278,18.52z/data=!4m15!1m8!3m7!1s0x3135ab4b3f7dca59:0x40eba4888f2cd814!2zTmfDtSA3OCBEdXkgVMOibiwgROG7i2NoIFbhu41uZyBI4bqtdSwgQ-G6p3UgR2nhuqV5LCBIw6AgTuG7mWksIFZp4buHdCBOYW0!3b1!8m2!3d21.0326451!4d105.7833219!16s%2Fg%2F1jkyv2bx9!3m5!1s0x3135abfe95ba0d93:0x8ab9e245cb41e1f0!8m2!3d21.0320335!4d105.7832347!16s%2Fg%2F11q9cqlpqw">
                 Số 1, ngõ 78, Duy Tân, Dịch Vọng Hậu, Cầu Giấy, Hà Nội
               </a>
@@ -779,14 +814,14 @@
             <div class="flex basis-1/4 flex-row">
               <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 basis-1/3"
+                  class="h-5 w-5 basis-1/3 cursor-pointer"
                   fill="currentColor"
                   viewBox="0 0 24 24">
                   <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
               </svg>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 basis-1/3"
+                class="h-5 w-5 basis-1/3 cursor-pointer"
                 fill="currentColor"
                 viewBox="0 0 24 24">
                 <path
@@ -794,7 +829,7 @@
               </svg>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 basis-1/3"
+                class="h-5 w-5 basis-1/3 cursor-pointer"
                 fill="currentColor"
                 viewBox="0 0 24 24">
                 <path
@@ -809,37 +844,109 @@
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
   <script>
+
+
+var element3 = document.getElementById("element3");
+var waypoint = new Waypoint({
+  element: element3,
+  handler: function(direction) {
+    // Thêm lớp CSS để kích hoạt hiệu ứng hoạt hình
+    element.classList.add('animate__animated', 'animate__bounceIn');
+  },
+  offset: '100%', // Kích hoạt hiệu ứng hoạt hình khi phần tử được nhìn thấy 50% trên màn hình
+});
+
+
+var element = document.getElementById('element');
+
+var waypoint = new Waypoint({
+  element: element,
+  handler: function(direction) {
+    // Thêm lớp CSS để kích hoạt hiệu ứng hoạt hình
+    element.classList.add('animate__animated', 'animate__bounceIn',"animate__slow");
+  },
+  offset: '90%', // Kích hoạt hiệu ứng hoạt hình khi phần tử được nhìn thấy 50% trên màn hình
+});
+
+var element1 = document.getElementById('element1');
+
+var waypoint = new Waypoint({
+  element: element1,
+  handler: function(direction) {
+    // Thêm lớp CSS để kích hoạt hiệu ứng hoạt hình
+    element1.classList.add('animate__animated', 'animate__bounceIn','animate__slow-[1s]');
+    // element1.style.animationDelay = '1s';
+  },
+  offset: '100%', // Kích hoạt hiệu ứng hoạt hình khi phần tử được nhìn thấy 50% trên màn hình
+});
+
+var element2 = document.getElementById('element2');
+
+var waypoint = new Waypoint({
+  element: element2,
+  handler: function(direction) {
+    // Thêm lớp CSS để kích hoạt hiệu ứng hoạt hình
+    element2.classList.add('animate__animated', 'animate__backInRight');
+  },
+  offset: '100%', // Kích hoạt hiệu ứng hoạt hình khi phần tử được nhìn thấy 50% trên màn hình
+});
+
+var myElement = document.getElementById('my-element');
+
+var waypoint = new Waypoint({
+  element: myElement,
+  handler: function(direction) {
+    // Thêm lớp CSS để kích hoạt hiệu ứng hoạt hình
+    myElement.classList.add('animate__animated', 'animate__fadeInUp');
+  },
+  offset: '100%', // Kích hoạt hiệu ứng hoạt hình khi phần tử được nhìn thấy 50% trên màn hình
+   
+});
+
+
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 5,
-      spaceBetween: 20,
+      spaceBetween: 7,
+      // loop:true,
       breakpoints: {
         // when window width is >= 320px
         320: {
           slidesPerView: 2,
-          spaceBetween: 20,
+          spaceBetween: 7,
         },
         // when window width is >= 480px
         480: {
           slidesPerView: 3,
-          spaceBetween: 30,
+          spaceBetween: 7,
         },
         // when window width is >= 640px
         640: {
           slidesPerView: 4,
-          spaceBetween: 40,
+          spaceBetween: 7,
+        },
+        768: {
+          slidesPerView: 5,
+          spaceBetween: 7,
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 7,
         },
       },
-      // autoplay: {
-      //   delay: 250,
-      //   disableOnInteraction: false,
-      // },
+     
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
       },
     });
-  </script>
+  </script> 
   <script>
     const navbar = document.querySelector("nav");
     
@@ -850,6 +957,7 @@
       "./assets/img/IMG_6402.jpg",
       "./assets/img/IMG_6408.jpg",
       "./assets/img/IMG_6393.jpg",
+      "./assets/img/clients/IMG_9812.jpg"
     ];
     let index = 0;
     setInterval(function () {
@@ -884,7 +992,13 @@
       }
     };
 
+    function scrollToSection(id) {
+    var element5 = document.querySelector(id);
+    element5.scrollIntoView({ behavior: 'smooth', block: 'center'  });
+  }
+
     // Event listener for scroll events
     window.addEventListener("scroll", toggleNavbar);
   </script>
+  
 </html>
