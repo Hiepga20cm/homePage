@@ -1098,6 +1098,10 @@ nav.scrolled a span {
   margin-bottom: 10px;
 }
 
+.mb-\[15px\] {
+  margin-bottom: 15px;
+}
+
 .mb-\[30px\] {
   margin-bottom: 30px;
 }
@@ -1194,52 +1198,16 @@ nav.scrolled a span {
   margin-top: 15px;
 }
 
+.mt-\[2\%\] {
+  margin-top: 2%;
+}
+
 .mt-\[3rem\] {
   margin-top: 3rem;
 }
 
 .mt-\[5px\] {
   margin-top: 5px;
-}
-
-.mt-\[60px\] {
-  margin-top: 60px;
-}
-
-.mb-\[\] {
-  margin-bottom: ;
-}
-
-.mb-\[15px\] {
-  margin-bottom: 15px;
-}
-
-.mt-\[\] {
-  margin-top: ;
-}
-
-.mt-\[10\] {
-  margin-top: 10;
-}
-
-.mt-\[10\%\] {
-  margin-top: 10%;
-}
-
-.mt-\[20\%\] {
-  margin-top: 20%;
-}
-
-.mt-\[50\%\] {
-  margin-top: 50%;
-}
-
-.mt-\[5\%\] {
-  margin-top: 5%;
-}
-
-.mt-\[2\%\] {
-  margin-top: 2%;
 }
 
 .box-border {
@@ -2677,16 +2645,16 @@ nav.scrolled a span {
   padding-right: 0.25rem;
 }
 
-.pr-\[100px\] {
-  padding-right: 100px;
-}
-
 .pr-\[20px\] {
   padding-right: 20px;
 }
 
 .pr-\[24px\] {
   padding-right: 24px;
+}
+
+.pr-\[6\%\] {
+  padding-right: 6%;
 }
 
 .pt-2 {
@@ -2707,34 +2675,6 @@ nav.scrolled a span {
 
 .pt-\[10px\] {
   padding-top: 10px;
-}
-
-.pr-\[10\] {
-  padding-right: 10;
-}
-
-.pr-\[10\%\] {
-  padding-right: 10%;
-}
-
-.pr-\[50\%\] {
-  padding-right: 50%;
-}
-
-.pr-\[30\%\] {
-  padding-right: 30%;
-}
-
-.pr-\[0\%\] {
-  padding-right: 0%;
-}
-
-.pr-\[60\%\] {
-  padding-right: 60%;
-}
-
-.pr-\[6\%\] {
-  padding-right: 6%;
 }
 
 .text-left {
@@ -2847,6 +2787,11 @@ nav.scrolled a span {
   line-height: 1.5rem;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -2860,27 +2805,6 @@ nav.scrolled a span {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[10\%\] {
-  font-size: 10%;
-}
-
-.text-\[100\%\] {
-  font-size: 100%;
-}
-
-.text-\[30px\] {
-  font-size: 30px;
-}
-
-.text-\[40px\] {
-  font-size: 40px;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .font-\[300\] {
@@ -3150,14 +3074,6 @@ nav.scrolled a span {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\] {
-  color: ;
-}
-
-.text-\[10\] {
-  color: 10;
 }
 
 .underline {
@@ -4778,18 +4694,6 @@ nav.scrolled a span {
 
   .md\:h-\[700px\] {
     height: 700px;
-  }
-
-  .md\:h-\[\] {
-    height: ;
-  }
-
-  .md\:h-\[77\] {
-    height: 77;
-  }
-
-  .md\:h-\[77\%\] {
-    height: 77%;
   }
 
   .md\:w-0 {
