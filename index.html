@@ -24,11 +24,11 @@
   </head>
   <body class="font-exo">
     <header
-      id="home" class="min-h-screen flex flex-col text-bc-text w-full mx-auto bg-bc-primary"
+      id="home" class="min-h-full lg:min-h-screen flex flex-col text-bc-text max-w-screen mx-auto bg-bc-primary"
     >
-      <nav class="bc-navbar bg-inherit" id="navbar">
+      <nav class="bc-navbar bg-inherit relative" id="navbar">
         <a
-          class="flex flex-row justify-center items-center font-exo text-center text-2xl font-bold leading-6 basis-1/6 cursor-pointer"
+          class="flex flex-row justify-center items-center font-exo text-center text-2xl font-bold leading-6 cursor-pointer pl-4"
           onclick="scrollToSection('#home')"
           id="bc-logo"
         >
@@ -37,7 +37,7 @@
             >C</span
           >yber
         </a>
-        <div class="md:hidden md:order-5 flex justify-center items-center">
+        <div class="md:hidden md:order-5 flex justify-center items-center pr-4">
           <button class="bc-navbar-burger" id="nav-open">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@
             </svg>
           </button>
         </div>
-        <div class="hidden md:inline-block md:w-auto basis-4/6">
+        <div class="hidden md:inline-block absolute w-full">
           <ul
             class="menu flex justify-center items-center text-sm font-semibold h-full"
           >
@@ -68,8 +68,7 @@
             <li class="bc-nav-item"><a  class="scroll-smooth cursor-pointer" onclick="scrollToSection('#contact')">Liên hệ</a></li>
           </ul>
         </div>
-        <div class="action md:inline-block hidden basis-1/6"></div>
-
+        <div class="action md:inline-block hidden"></div>
         <div class="bc-mobile-navbar" id="mobile-navbar">
           <ul class="">
             <li>
@@ -105,8 +104,8 @@
         </div>
       </nav>
 
-      <div id="element1" class="container md:w-screen mx-auto mt-[2%] lg:px-5 md:px-4">
-        <div class="mx-auto mt-10 mb-8 -z-50 ">
+      <div id="element1" class="container md:w-screen mx-auto mt-[2%] lg:px-5 md:px-4 mobileLg:w-screen mobileSm:w-screen">
+        <div class="mx-auto mt-12 sm:mt-10 sm:mb-8 sm:-z-50 ">
           <h1 class="y-3 lg:text-5xl text-2xl font-bold text-center">
             BlueCyber
           </h1>
@@ -115,9 +114,9 @@
           </h2>
         </div>
         <div
-          class="cover block md:flex md:flex-row gap-7 md:h-[700px] relative"
+          class="h-[360px] cover block sm:flex md:flex-row gap-7 sm:h-[700px] relative"
         >
-          <div class="basis-3/4 rounded-[32px] overflow-hidden h-5/6 relative">
+          <div class="mt-2 sm:mt-0 sm:basis-3/4 rounded-[32px] overflow-hidden h-1/2 sm:h-5/6 relative">
             <img
               src="./assets/img/IMG_6406.jpg"
               class="object-cover w-full h-full  md:hover:scale-105 hover:brightness-75 transition-all duration-700 ease-in-out"
@@ -133,21 +132,21 @@
             <img
               src="./assets/img/IMG_6402.jpg"
               alt="#"
-              class="object-cover w-full h-full  md:hover:scale-105 hover:brightness-75 transition duration-700 ease-in-out cursor-pointer  "
+              class="object-cover w-full h-full md:hover:scale-105 hover:brightness-75 transition duration-700 ease-in-out cursor-pointer  "
               id="sub-cover"
             />
           </div>
           <div
-            class="absolute right-0 bottom-0 flex md:w-0.45 lg:w-[50%] xl:w-[45%] h-[50%]  bg-bc-primary"
+            class="h-[30%] md:h-[50%] relative sm:absolute right-0 bottom-0 flex md:w-0.45 lg:w-[50%] xl:w-[45%] sm:h-[50%] bg-bc-primary"
           >
             <!-- <div
               class="md:block hidden h-[35%] w-auto absolute bottom-[116.7px] left-[-32%] overflow-hidden after:absolute after:w-[64px] after:h-[64px] after:rounded-full after:right-[-100px] after:bottom-[-100px] after:box-content after:border-[100px] after:border-bc-primary"
             ></div> -->
             <div
-            class="md:block hidden h-[32px] w-[32px] absolute bottom-[116.7px] left-[-32px] overflow-hidden after:absolute after:w-[64px] after:h-[64px] after:rounded-full after:right-[-100px] after:bottom-[-100px] after:box-content after:border-[100px] after:border-bc-primary"
+            class="md:block hidden h-[32px] w-[33px] absolute bottom-[116.5px] left-[-32px] overflow-hidden after:absolute after:w-[64px] after:h-[64px] after:rounded-full after:right-[-100px] after:bottom-[-100px] after:box-content after:border-[100px] after:border-bc-primary"
           ></div>
             <a
-              class="bc-btn absolute -translate-x-1/2 -translate-y-1/2 p-6 top-0 left-1/2 md:left-0"
+              class="hidden sm:inline-block bc-btn absolute -translate-x-1/2 -translate-y-1/2 p-6 top-0 left-1/2 md:left-0"
               href="#about"
             >
               <svg
@@ -166,32 +165,32 @@
               </svg>
             </a>
             <!-- Menu div lồn xộn -->
-            <div id="element3" class="flex lg:block  flex-wrap items-center relative mx-[5%]">
-              <div class="bc-services-item bg-bc-red lg:bottom-0 lg:left-2 md:bottom-auto hover:animate-bounce">
+            <div id="element3" class="h-auto mt-3 sm:mt-0 md:h-[290px] lg:h-auto flex lg:block flex-wrap items-center relative sm:mx-[5%]">
+              <div class="bc-services-item-small lg:bc-services-item bg-bc-red lg:bottom-0 lg:left-2 md:bottom-auto hover:scale-110 transition-all duration-300 ease-out">
                 Penetration Testing
               </div>
               <div
-                class="bc-services-item bg-yellow-300 lg:bottom-[80px] lg:left-[16px] lg:origin-bottom-left lg:-rotate-12  hover:scale-110 transition-all duration-300 ease-out"
+                class="bc-services-item-small lg:bc-services-item bg-yellow-300 lg:bottom-[80px] lg:left-[16px] lg:origin-bottom-left lg:-rotate-12  hover:scale-110 transition-all duration-300 ease-out"
               >
                 Vulnerabilites Accessment
               </div>
               <div
-                class="bc-services-item bg-green-700 lg:bottom-[50%] lg:left-[24px] lg:origin-bottom-left lg:-rotate-26  hover:scale-110 transition-all duration-300 ease-out"
+                class="bc-services-item-small lg:bc-services-item bg-green-700 lg:bottom-[50%] lg:left-[24px] lg:origin-bottom-left lg:-rotate-26  hover:scale-110 transition-all duration-300 ease-out"
               >
                 Malware Cleanup
               </div>
               <div
-                class="bc-services-item bg-cyan-400 lg:bottom-0 lg:left-[300px] lg:origin-bottom-right lg:rotate-14  hover:scale-110 transition-all duration-300 ease-out"
+                class="bc-services-item-small lg:bc-services-item bg-cyan-400 lg:bottom-0 lg:left-[270px] xl:left-[300px] lg:origin-bottom-right lg:rotate-14  hover:scale-110 transition-all duration-300 ease-out"
               >
                 System Hardening
               </div>
               <div
-                class="bc-services-item bg-indigo-600 lg:bottom-[174px] lg:left-[270px] lg:origin-bottom-left lg:rotate-24  hover:scale-110 transition-all duration-300 ease-out"
+                class="bc-services-item-small lg:bc-services-item bg-indigo-600 lg:bottom-[174px] lg:left-[250px] xl:left-[270px] lg:origin-bottom-left lg:rotate-24  hover:scale-110 transition-all duration-300 ease-out"
               >
                 Security Consulting
               </div>
               <div
-                class="bc-services-item bg-stone-600 lg:bottom-[260px] lg:left-[240px] lg:origin-bottom-right lg:-rotate-12  hover:scale-110 transition-all duration-300 ease-out"
+                class="bc-services-item-small lg:bc-services-item bg-stone-600 lg:bottom-[260px] lg:left-[220px] xl:left-[240px] lg:origin-bottom-right lg:-rotate-12  hover:scale-110 transition-all duration-300 ease-out"
               >
                 Trainning
               </div>
@@ -200,44 +199,44 @@
         </div>
       </div>
     </header>
-    <main class="h-screen -z-10">
+    <main class="sm:h-screen sm:-z-10">
       <div class="container mx-auto">
-        <div class="w-[100%] mt-[3rem] lg:px-5 md:px-4 ">
+        <div class="sm:w-[100%] mt-[3rem] sm:lg:px-5 md:px-4 ">
           <div class="swiper mySwiper mt-3">
             <!-- <div class="flex items-center justify-center text-[46px] font-[300]" >Được tin tưởng bởi nhiều tổ chức lớn</div> -->
             <div class="swiper-wrapper flex justify-between items-center  ">
               <div class="swiper-slide "><img
-                  class="h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
+                  class="h-[50px] sm:h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
                   src="./assets/img/clients/viettel.png"
                   alt="#"
                 /></div>  
                <div class="swiper-slide "><img
-                 class="h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
+                 class="h-[50px] sm:h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
                   src="./assets/img/clients/kiu.png"
                   alt="#"
                 /></div>
                 <div class="swiper-slide"><img
-                 class="h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
+                 class="h-[50px] sm:h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
                   src="./assets/img/clients/seshin.png"
                   alt="#"
                 /></div>
                  <div class="swiper-slide "><img
-                  class="h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
+                  class="h-[50px] sm:h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
                   src="./assets/img/clients/viettelicd.png"
                   alt="#"
                 /></div>
                   <div class="swiper-slide"><img
-                 class="h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
+                 class="h-[50px] sm:h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
                   src="./assets/img/clients/dongdo.png"
                   alt="#"
                 /></div>
                    <div class="swiper-slide"><img
-                  class="h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
+                  class="h-[50px] sm:h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
                   src="./assets/img/clients/hitaco.png"
                   alt="#"
                 /></div>   
                 <div class="swiper-slide"><img
-                class="h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
+                class="h-[50px] sm:h-[100px] mx-auto hover:scale-110 transition-all duration-300 ease-out"
                 src="./assets/img/clients/vietauctions.png"
                 alt="#"
               /></div>    
@@ -246,15 +245,15 @@
         </div>
       </div>
       <section class="wow fadeInUp ">
-        <div id="about" class="flex container mx-auto m-auto mt-16 lg:px-5 md:px-4">
+        <div id="about" class="mt-[3rem] sm:flex container mx-auto m-auto sm:mt-16 lg:px-5 md:px-4 mx-[10%]">
           
-          <div id="element" class="w-[50%] pr-[6%]">
+          <div id="element" class="sm:w-[50%] sm:pr-[6%]">
             <p
-              class="hover:scale-110 cursor-default transition-all duration-300 ease-out text-[48px] w-[500px] leading-[1.15] mb-[30px] font-[600] "
+              class="hover:scale-110 cursor-default transition-all duration-300 ease-out sm:text-[48px] text-[30px] sm:w-[500px] leading-[1.15] mb-[5%] font-[600] "
             >
               Sứ mệnh
             </p>
-            <p class="mb-[15px] left-0 right-0 text-lg">
+            <p class="text-[15px] sm:mb-[15px] mb-[5%] left-0 right-0 sm:text-lg">
               Chúng tôi cung cấp các dịch vụ an toàn thông tin chuyên nghiệp và
               đa dạng như đánh giá rủi ro an ninh thông tin, kiểm tra thâm nhập,
               bảo mật ứng dụng và hệ thống, quản lý chứng chỉ số, giám sát mạng
@@ -263,7 +262,7 @@
               của khách hàng được bảo vệ một cách tối đa.
             </p>
 
-            <p class="left-0 right-0 text-lg">
+            <p class="hidden sm:inline-block text-[15px] sm:text-lg left-0 right-0">
               Ngoài ra, chúng tôi cũng cung cấp các khóa đào tạo và huấn luyện
               về an toàn thông tin để giúp khách hàng nâng cao hiểu biết và kỹ
               năng trong lĩnh vực này. Chúng tôi cam kết mang đến các dịch vụ an
@@ -271,11 +270,11 @@
               các hoạt động kinh doanh chính của mình.
             </p>
           </div>
-          <div class="w-[50%] h-[500px]">
+          <div class="mt-[5%] sm:w-[50%] sm:h-[500px] w-[100%] h-[250px]">
             <img
               src="./assets/img/IMG_4010.jpg"
               alt="#"
-              class="object-cover w-full h-full  md:hover:scale-105 hover:brightness-75 transition duration-700 ease-in-out cursor-pointer "
+              class="rounded-md object-cover w-full h-full  md:hover:scale-105 hover:brightness-75 transition duration-700 ease-in-out cursor-pointer "
               id="sub-cover"
             />
           </div>
@@ -285,11 +284,10 @@
         <div class="text-des"></div>
         <div class="picture-des"></div>
       </div>
-      <div id="my-element" class="container mx-auto lg:px-5 md:px-4 w-[100%]" style="  margin: 100px auto">
-        <div  style="display: flex; justify-content: space-between  ">
+      <div id="my-element" class="container mx-auto lg:px-5 md:px-4 w-[100%] my-12 sm:my-[100px] ">
+        <div class="sm:flex sm:space-between">
           <p
-             
-            class="text-[48px] font-[600] leading-1.15 mb-[30px] hover:scale-105 cursor-default transition-all duration-300 ease-out"
+            class="text-[30px] sm:text-[48px] font-[600] leading-1.15 mb-[30px] hover:scale-105 cursor-default transition-all duration-300 ease-out"
           >
             Dịch vụ tiêu biểu
           </p>
@@ -298,48 +296,32 @@
             below
           </p> -->
         </div>
-        <div id="services" class="grid grid-cols-3 gap-4">
+        <div id="services" class="sm:grid sm:grid-cols-3 sm:gap-4">
           <div class="core-service flex gap-5">
             <p
-              style="
-                font-size: 48px;
-                font-weight: 600;
-                line-height: 1.15;
-                margin-bottom: 30px;
-                color: black;
-                -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-                -webkit-text-stroke-width: 1px;
-                -webkit-text-stroke-color: black;
-              "
+              class="w-[50px] text-[48px] sm:font-[600] sm:leading-[1.15] sm:mb-[30px] sm:black"
+              style="-webkit-text-fill-color: white; /* Will override color (regardless of order) */
+              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: black;"
             >
               01
             </p>
-            <div
-              style="
-                border-top: 1px solid black;
-                margin-top: 25px;
-                width: 80%;
-                padding-top: 10px;
-              "
-              class="left-0 right-0 text-lg"
-            >
+            <div class="border-t border-black mt-6 w-4/5 pt-2 left-0 right-0 sm:text-lg">
               <p
               class="text-[20px] font-[550] leading-[1.15] mb-[5px] cursor-default"
               >
                 Penetration Testing <button class="float-right hover:scale-125 transition-all duration-300 ease-out"><svg class="h-8 w-8 text-black"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />  <polyline points="15 3 21 3 21 9" />  <line x1="10" y1="14" x2="21" y2="3" /></svg></button>
               </p>
-              Kiểm tra toàn diện ứng dụng web, xác định các lỗ hổng bảo mật bằng
-              cách rà quét trong hệ thống.
+              <p class="text-[14px] sm:text-[16px]">
+                Kiểm tra toàn diện ứng dụng web, xác định các lỗ hổng bảo mật bằng
+                cách rà quét trong hệ thống.
+              </p>
             </div>
           </div>
           <div class="core-service flex gap-5">
             <p
+              class="w-[50px] text-[48px] sm:font-[600] sm:leading-[1.15] sm:mb-[30px] sm:black"
               style="
-                font-size: 48px;
-                font-weight: 600;
-                line-height: 1.15;
-                margin-bottom: 30px;
-                color: black;
                 -webkit-text-fill-color: white; /* Will override color (regardless of order) */
                 -webkit-text-stroke-width: 1px;
                 -webkit-text-stroke-color: black;
@@ -348,31 +330,22 @@
               02
             </p>
             <div
-              style="
-                border-top: 1px solid black;
-                margin-top: 25px;
-                width: 80%;
-                padding-top: 10px;
-              "
-              class="left-0 right-0 text-lg"
-            >
+            class="border-t border-black mt-6 w-4/5 pt-2 left-0 right-0 sm:text-lg">
               <p
               class="text-[20px] font-[550] leading-[1.15] mb-[5px] cursor-default"
               >
                 Malware Cleanup <button class="float-right hover:scale-125 transition-all duration-300 ease-out"><svg class="h-8 w-8 text-black"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />  <polyline points="15 3 21 3 21 9" />  <line x1="10" y1="14" x2="21" y2="3" /></svg></button>
               </p>
-              Dịch vụ làm sạch mã độc giúp các tổ chức, doanh nghiệp rà soát
-              phần mềm độc hại cho các máy chủ, máy trạm.
+              <p class="text-[14px] sm:text-[16px]">
+                Dịch vụ làm sạch mã độc giúp các tổ chức, doanh nghiệp rà soát
+                phần mềm độc hại cho các máy chủ, máy trạm.
+              </p>
             </div>
           </div>
           <div class="core-service flex gap-5">
             <p
+              class="w-[50px] text-[48px] sm:font-[600] sm:leading-[1.15] sm:mb-[30px] sm:black"
               style="
-                font-size: 48px;
-                font-weight: 600;
-                line-height: 1.15;
-                margin-bottom: 30px;
-                color: black;
                 -webkit-text-fill-color: white; /* Will override color (regardless of order) */
                 -webkit-text-stroke-width: 1px;
                 -webkit-text-stroke-color: black;
@@ -380,33 +353,22 @@
             >
               03
             </p>
-            <div
-              style="
-                border-top: 1px solid black;
-                margin-top: 25px;
-                width: 80%;
-                padding-top: 10px;
-              "
-              class="left-0 right-0 text-lg"
-            >
+            <div class="border-t border-black mt-6 w-4/5 pt-2 left-0 right-0 sm:text-lg">
               <p
                 class="text-[20px] font-[550] leading-[1.15] mb-[5px] cursor-default"
               >
                 Security Consulting <button class="float-right hover:scale-125 transition-all duration-300 ease-out"><svg class="h-8 w-8 text-black"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />  <polyline points="15 3 21 3 21 9" />  <line x1="10" y1="14" x2="21" y2="3" /></svg></button>
               </p>
-              
-              Dịch vụ tư vấn an toàn thông tin, đáp ứng theo các chuẩn của Bộ
-              thông tin truyền thông, ngân hàng nhà nước, ISO, PCI-DSS,...
+              <p class="text-[14px] sm:text-[16px]">
+                Dịch vụ tư vấn an toàn thông tin, đáp ứng theo các chuẩn của Bộ
+                thông tin truyền thông, ngân hàng nhà nước, ISO, PCI-DSS,...
+              </p>
             </div>
           </div>
           <div class="core-service flex gap-5">
             <p
+              class="w-[50px] text-[48px] sm:font-[600] sm:leading-[1.15] sm:mb-[30px] sm:black"
               style="
-                font-size: 48px;
-                font-weight: 600;
-                line-height: 1.15;
-                margin-bottom: 30px;
-                color: black;
                 -webkit-text-fill-color: white; /* Will override color (regardless of order) */
                 -webkit-text-stroke-width: 1px;
                 -webkit-text-stroke-color: black;
@@ -414,32 +376,22 @@
             >
               04
             </p>
-            <div
-              style="
-                border-top: 1px solid black;
-                margin-top: 25px;
-                width: 80%;
-                padding-top: 10px;
-              "
-              class="left-0 right-0 text-lg"
-            >
+            <div class="border-t border-black mt-6 w-4/5 pt-2 left-0 right-0 sm:text-lg">
               <p
               class="text-[20px] font-[550] leading-[1.15] mb-[5px] cursor-default"
               >
                 Vulnerabilites Accessment<button class="float-right hover:scale-125 transition-all duration-300 ease-out"><svg class="h-8 w-8 text-black"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />  <polyline points="15 3 21 3 21 9" />  <line x1="10" y1="14" x2="21" y2="3" /></svg></button>
               </p>
-              Dịch vụ rà quét toàn diện, chỉ ra các điểm
-              yếu trong tổ chức và hệ thống.
+              <p class="text-[14px] sm:text-[16px]">
+                Dịch vụ rà quét toàn diện, chỉ ra các điểm
+                yếu trong tổ chức và hệ thống.
+              </p>
             </div>
           </div>
           <div class="core-service flex gap-5">
             <p
+              class="w-[50px] text-[48px] sm:font-[600] sm:leading-[1.15] sm:mb-[30px] sm:black"
               style="
-                font-size: 48px;
-                font-weight: 600;
-                line-height: 1.15;
-                margin-bottom: 30px;
-                color: black;
                 -webkit-text-fill-color: white; /* Will override color (regardless of order) */
                 -webkit-text-stroke-width: 1px;
                 -webkit-text-stroke-color: black;
@@ -447,32 +399,22 @@
             >
               05
             </p>
-            <div
-              style="
-                border-top: 1px solid black;
-                margin-top: 25px;
-                width: 80%;
-                padding-top: 10px;
-              "
-              class="left-0 right-0 text-lg"
-            >
+            <div class="border-t border-black mt-6 w-4/5 pt-2 left-0 right-0 sm:text-lg">
               <p
               class="text-[20px] font-[550] leading-[1.15] mb-[5px] cursor-default"
               >
                 System Hardening <button class="float-right hover:scale-125 transition-all duration-300 ease-out"><svg class="h-8 w-8 text-black"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />  <polyline points="15 3 21 3 21 9" />  <line x1="10" y1="14" x2="21" y2="3" /></svg></button>
               </p>
-              Dịch vụ thiết lập an toàn thông tin cho các hệ thống theo tiêu
-              chuẩn.
+              <p class="text-[14px] sm:text-[16px]">
+                Dịch vụ thiết lập an toàn thông tin cho các hệ thống theo tiêu
+                chuẩn.
+              </p>
             </div>
           </div>
           <div class="core-service flex gap-5">
             <p
+              class="w-[50px] text-[48px] sm:font-[600] sm:leading-[1.15] sm:mb-[30px] sm:black"
               style="
-                font-size: 48px;
-                font-weight: 600;
-                line-height: 1.15;
-                margin-bottom: 30px;
-                color: black;
                 -webkit-text-fill-color: white; /* Will override color (regardless of order) */
                 -webkit-text-stroke-width: 1px;
                 -webkit-text-stroke-color: black;
@@ -480,151 +422,127 @@
             >
               06
             </p>
-            <div
-              style="
-                border-top: 1px solid black;
-                margin-top: 25px;
-                width: 80%;
-                padding-top: 10px;
-              "
-              class="left-0 right-0 text-lg"
-            >
+            <div class="border-t border-black mt-6 w-4/5 pt-2 left-0 right-0 sm:text-lg">
               <p
               class="text-[20px] font-[550] leading-[1.15] mb-[5px] cursor-default"
               >
                 Trainning <button class="float-right hover:scale-125 transition-all duration-300 ease-out"><svg class="h-8 w-8 text-black"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />  <polyline points="15 3 21 3 21 9" />  <line x1="10" y1="14" x2="21" y2="3" /></svg></button>
               </p>
-              Cung cấp các kiến thức cơ bản và chuyên sâu về ATTT, hỗ trợ doanh
-              nghiệp phát triển nguồn lực ATTT và nâng cao chất lượng ATTT tại
-              doanh nghiệp.
+              <p class="text-[14px] sm:text-[16px]">
+                Cung cấp các kiến thức cơ bản và chuyên sâu về ATTT, hỗ trợ doanh
+                nghiệp phát triển nguồn lực ATTT và nâng cao chất lượng ATTT tại
+                doanh nghiệp.
+              </p>
             </div>
           </div>
         </div>
-        
       </div>
     </span>
-    <div id="element2" class="bg-bc-primary  ">
+    <div id="element2" class="bg-bc-primary">
     <div  class="container mx-auto lg:px-5 md:px-4 py-[3.5%] ">
-      <div  style="display: flex; justify-content: space-between ">
+      <div class="sm:flex sm:justify-between">
           <p
-            class="text-[55px] font-[600] leading-1.15 mb-[30px] text-white hover:scale-110 cursor-default transition-all duration-300 ease-out" 
+            class="my-2 text-center sm:text-left text-[30px] sm:text-[55px] font-[600] sm:leading-1.15 sm:mb-[30px] text-white hover:scale-110 cursor-default transition-all duration-300 ease-out" 
           >
             Sản phẩm
           </p>
-          <p class="text-white w-[35%] cursor-default">
+          <p class="sm:text-[18px] text-white w-[35%] cursor-default hidden sm:inline-block">
             Chúng tôi đặt tất cả tâm huyết vào từng dòng code và tự hào mang đến những sản phẩm chất lượng nhất. 
           </p>
       </div>
-      <!--<div class="flex row-auto ">
-         <div class="flex-grow-0 flex-shrink-0 basis-full max-w-full">
-          <ul class="flex mt-[5px] mr-0 ml-0 mb-[5px] text-center ">
-            <li class=" cursor-pointer mt-[15px] pt-[10px] pr-[20px] pb-[10px] pl-[20px] xl:text-[16px] lg:text-[12px] text-white uppercase rounded-md border-solid border-2 border-white hover:scale-125 transition-all duration-300 ease-out">
-              All
-            </li>
-          </ul>
-        </div> 
-      </div>-->
-          <div   class="flex items-start  relative h-[500px]  text-center ">
-            <div class="items-center text-center left-0 top-0 visible border-solid border-[3px] rounded-sm border-white hover:scale-105 transition-all duration-300 ease-out">
+          <div class="sm:flex items-start relative text-center">
+            <div class="sm:items-center sm:text-center sm:left-0 sm:top-0 sm:visible sm:border-solid sm:border-[3px] sm:rounded-sm sm:border-white sm:hover:scale-105 sm:transition-all sm:duration-300 sm:ease-out">
               <div id="product" class="max-w-[600px]">
-                <figure class="bg-black relative ">
+                <figure class="bg-black relative">
                   <img src="./assets/img/bluepam.png" class="h-auto max-w-[100%] box-border align-middle">
                 </figure>
-                <div class="text-left p-[25px] bg-white text-black ">
-                  <h4 class="text-[28px] font-[700] mb-[10px] pb-0">
+                <div class="text-left p-[15px] sm:p-[25px] bg-white text-black ">
+                  <h4 class="text-[20px] sm:text-[28px] font-[700] mb-[10px] pb-0">
                     <a href="#">BluePam</a>
                     <button class="float-right hover:scale-125"><svg class="h-8 w-8 text-black"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />  <polyline points="15 3 21 3 21 9" />  <line x1="10" y1="14" x2="21" y2="3" /></svg></button>
                   </h4>
-                  <p class="p-0 m-0 font-[500] text-[14px] uppercase">Privileged Access Management</p>
+                  <p class="font-[500] text-[14px] uppercase">Privileged Access Management</p>
                 </div>
               </div>
             </div>
-
             <div class="flex-col ml-[10%] mt-0">
-             <p class="text-[64px] text-white font-[30px] mb-5 mt-0 cursor-default hover:scale-105 transition-all duration-300 leading-none">Zero trust access</p>
-              <ul >
-                <li  class="mb-3">
-                  <p class="flex items-center text-white cursor-default hover:scale-105 transition-all duretion-300">
-                    <span class="inline-block mr-4">
-                      <svg class="h-8 w-8 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                      </svg>
-                    </span>
+             <p class="text-[30px] sm:text-[64px] text-white sm:font-[30px] sm:mb-5 mt-3 sm:mt-0 cursor-default hover:scale-105 sm:transition-all sm:duration-300 sm:leading-none">Zero trust access</p>
+              <ul>
+                <li  class="mb-3 flex">
+                  <span class="inline-block mr-4">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                  </span>
+                  <p class="text-[13px] sm:text-[16px] text-left mt-[2px] sm:mt-1 text-white cursor-default">
                     Identity Aware Access Proxy
                   </p>
                 </li>
 
-                <li class="mb-3">
-                  <p class="flex items-center text-white cursor-default hover:scale-105 transition-all duretion-300">
-                    <span class="inline-block mr-4">
-                      <svg class="h-8 w-8 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                      </svg>
-                    </span>
+                <li class="mb-3 flex">
+                  <span class="inline-block mr-4">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                  </span>
+                  <p class="text-[13px] sm:text-[16px] text-left mt-[2px] sm:mt-1 text-white cursor-default">
                     Privileged Access Management
                   </p>
                 </li>
 
-                <li class="mb-3">
-                  <p class="flex items-center text-white cursor-default hover:scale-105 transition-all duretion-300">
-                    <span class="inline-block mr-4">
-                      <svg class="h-8 w-8 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                      </svg>
-                    </span>
+                <li class="mb-3 flex">
+                  <span class="inline-block mr-4">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                  </span>
+                  <p class="text-[13px] sm:text-[16px] text-left mt-[2px] sm:mt-1 text-white cursor-default">
                     Two-Factor Authentication
                   </p>
                 </li>
 
-                <li class="mb-3">
-                  <p class="flex items-center text-white cursor-default hover:scale-105 transition-all duretion-300">
-                    <span class="inline-block mr-4">
-                      <svg class="h-8 w-8 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                      </svg>
-                    </span>
+                <li class="mb-3 flex">
+                  <span class="inline-block mr-4">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                  </span>
+                  <p class="text-[13px] sm:text-[16px] text-left mt-[2px] sm:mt-1 text-white cursor-default">
                     Device Hygiene and Context Aware Policies
                   </p>
                 </li>
-
-                <li class="mb-3">
-                  <p class="flex items-center text-white cursor-default hover:scale-105 transition-all duretion-300">
-                    <span class="inline-block mr-4">
-                      <svg class="h-8 w-8 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                      </svg>
-                    </span>
+                <li class="mb-3 flex">
+                  <span class="inline-block mr-4">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                  </span>
+                  <p class="text-[13px] sm:text-[16px] text-left mt-[2px] sm:mt-1 text-white cursor-default">
                     Web, SSH, RDP, and Database services.
                   </p>
                 </li>
-
-                
-                
               </ul>
             </div>
           </div>
-          
         </div> 
    </div>
     <footer
       class="min-h-screen flex flex-col text-black w-full mx-auto bg-bc-footer my-[2%] "
     >
       <div>
-        <div class="mx-auto mt-10 mb-8 -z-50">
-          <h1 class=" lg:text-5xl md:text-4xl mt-45 font-bold text-center mb-[10px] hover:scale-110 transition-all duration-300 ease-out cursor-default">
+        <div class="flex flex-col justify-center mx-auto items-center mt-5 sm:mt-10 mb-8 -z-50">
+          <h1 class="text-xl lg:text-5xl md:text-4xl sm:mt-45 font-bold text-center mb-[10px]">
             Chất lượng nhân lực
           </h1>
-          <h3 class=" text-sm text-center hover:scale-110 transition-all duration-300 ease-out cursor-default">
-            Với đội ngũ nhân viên có kinh nghiệm nhiều năm trong lĩnh vực an toàn thông tin
-          </h3>
-          <h3 class=" text-center text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default">
-            Chúng tôi đảm bảo mang đến khách hàng những dịch vụ tốt nhất
+          <h3 class="w-72 sm:w-90 justify-center items-center text-center mt-1 text-sm">
+            Với đội ngũ nhân viên có kinh nghiệm nhiều năm trong lĩnh vực an toàn thông tin, 
+            chúng tôi đảm bảo mang đến khách hàng những dịch vụ tốt nhất
           </h3>
         </div>
 
         <div
           id="carouselExampleCaptions"
-          class="relative mb-56"
+          class="mb-28 relative sm:mb-56"
           data-te-carousel-init
           data-te-carousel-slide
         >
@@ -675,11 +593,11 @@
                   alt="#"
                   class="w-60 h-60 rounded-lg bg-clip-padding block "
                 />
-                <h3 class="text-black mt-1 text-xl hover:scale-110 transition-all duration-300 ease-out cursor-default">Sơn DK</h4>
-                <h4 class="mt-0 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default">An toàn thông tin</h4>
-                <h4 class="mt-1 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default">Để đạt được thành công, một người cần có cả tài năng và nỗ lực. Tài năng sẽ giúp</h4>
-                  <h4 class="mt-1 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default"> cho người đó bắt đầu và tiến bộ nhanh hơn trong lĩnh vực của mình, trong khi nỗ lực sẽ giúp cho người đó vượt </h4>
-                  <h4 class="mt-1 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default"> qua những khó khăn và đạt được mục tiêu của mình </h4>
+                <h3 class="text-black mt-1 text-xl cursor-default">Sơn DK</h4>
+                <h4 class="mt-0 text-sm cursor-default">An toàn thông tin</h4>
+                <h4 class="w-72 sm:w-90 justify-center items-center text-center mt-1 text-sm cursor-default">Để đạt được thành công, một người cần có cả tài năng và nỗ lực. Tài năng sẽ giúp
+                  cho người đó bắt đầu và tiến bộ nhanh hơn trong lĩnh vực của mình, trong khi nỗ lực sẽ giúp cho người đó vượt
+                  qua những khó khăn và đạt được mục tiêu của mình </h4>
               </div>
              
            
@@ -696,11 +614,11 @@
                 alt="#"
                 class="w-60 h-60 rounded-lg bg-clip-padding block"
               />
-              <h3 class="text-black mt-1 text-xl hover:scale-110 transition-all duration-300 ease-out cursor-default">Lê Ích Dương</h4>
-              <h4 class="mt-0 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default">Chuyên gia an toàn thông tin</h4>
-              <h4 class="mt-1 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default">Để đạt được thành công, một người cần có cả tài năng và nỗ lực. Tài năng sẽ giúp</h4>
-              <h4 class="mt-1 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default"> cho người đó bắt đầu và tiến bộ nhanh hơn trong lĩnh vực của mình, trong khi nỗ lực sẽ giúp cho người đó vượt </h4>
-              <h4 class="mt-1 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default"> qua những khó khăn và đạt được mục tiêu của mình </h4>
+              <h3 class="text-black mt-1 text-xl ease-out cursor-default">Lê Ích Dương</h4>
+              <h4 class="mt-0 text-sm cursor-default">Chuyên gia an toàn thông tin</h4>
+              <h4 class="w-72 sm:w-90 justify-center items-center text-center mt-1 text-sm cursor-default">Để đạt được thành công, một người cần có cả tài năng và nỗ lực. Tài năng sẽ giúp
+                cho người đó bắt đầu và tiến bộ nhanh hơn trong lĩnh vực của mình, trong khi nỗ lực sẽ giúp cho người đó vượt
+                qua những khó khăn và đạt được mục tiêu của mình </h4>
             </div>
             </div>
             <!--Third item-->
@@ -715,15 +633,13 @@
                 alt="#"
                 class="w-60 h-60 rounded-lg bg-clip-padding block"
               />
-              <h3 class="text-black mt-1 text-xl hover:scale-110 transition-all duration-300 ease-out cursor-default">Nguyễn Văn Hiệp</h4>
-              <h4 class="mt-0 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default">An toàn thông tin</h4>
-              <h4 class="mt-1 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default">Để đạt được thành công, một người cần có cả tài năng và nỗ lực. Tài năng sẽ giúp</h4>
-              <h4 class="mt-1 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default"> cho người đó bắt đầu và tiến bộ nhanh hơn trong lĩnh vực của mình, trong khi nỗ lực sẽ giúp cho người đó vượt </h4>
-              <h4 class="mt-1 text-sm hover:scale-110 transition-all duration-300 ease-out cursor-default"> qua những khó khăn và đạt được mục tiêu của mình </h4>
+              <h3 class="text-black mt-1 text-xl cursor-default">Nguyễn Văn Hiệp</h4>
+              <h4 class="justify-center items-center text-center mt-0 text-sm cursor-default">An toàn thông tin</h4>
+              <h4 class="w-72 sm:w-90 justify-center items-center text-center mt-1 text-sm cursor-default">Để đạt được thành công, một người cần có cả tài năng và nỗ lực. Tài năng sẽ giúp
+              cho người đó bắt đầu và tiến bộ nhanh hơn trong lĩnh vực của mình, trong khi nỗ lực sẽ giúp cho người đó vượt
+              qua những khó khăn và đạt được mục tiêu của mình </h4>
             </div>
             </div>
-
-            
           </div>
 
           <!--Carousel controls - prev item-->
@@ -790,34 +706,35 @@
               <h1 class="lg:text-5xl md:text-4xl text-center cursor-default">
                   Hãy liên hệ với chúng tôi
               </h1>
-                  <h2 class="my-4 font-thin w-90 text-center cursor-default">
+              <h2 class="text-[13px] sm:text-[16px] mx-2 my-3 sm:my-4 font-thin sm:w-90 text-center cursor-default">
                     Chúng tôi hiểu rằng an toàn thông tin là một vấn đề quan trọng và cấp bách, vì vậy chúng tôi sẵn sàng phục vụ 
                     khách hàng của mình 
-                  </h2>
+              </h2>
            
-                  <form class=" flex flex-row border border-white rounded-[25px] w-85 h-12 justify-center items-center overflow-hidden pl-2 pr-1">
-                      <input name="email" type="text" placeholder="Enter your email address" class="placeholder:text-white focus:outline-none bg-bc-yellow w-4/5 h-full"/>
-                      <button class="text-bc-primary text-center bg-white rounded-[25px] h-10 w-[30%]  hover:scale-110 transition-all duration-300 ease-out">Contact us</button>
-                  </form>
+              <form name="contact-form" id="myForm" action="" method="POST" class="flex p-1 flex-row border border-white rounded-[25px] sm:w-[485px] sm:h-12 justify-center items-center overflow-hidden sm:pl-2 sm:pr-1">
+                <input id="emailInput" name="email" type="text" placeholder=" Enter your email address" class="autofill:bg-bc-primary mr-3 placeholder:text-white focus:outline-none bg-bc-yellow w-[95%] sm:w-[80%] sm:h-full"/>
+                <!-- <span id="emailError" class="text-red-500 hidden">Invalid email format</span> -->
+                <button type="submit" class="mr-[2px] sm:mr-0 p-[2px] sm:p-0 text-[12px] sm:text-[16px] text-bc-primary text-center bg-white rounded-[25px] sm:h-10 w-[30%] hover:scale-110 transition-all duration-300 ease-out">Contact us</button>
+              </form>
           </div>
   
         </div>
-          <div class="container flex flex-row mx-auto mt-28 lg:px-5 md:px-4">
-            <div class="basis-1/4">
-              <h1 class="cursor-default">Email</h1>
-             <p> <a href="mailto:contact@bluecyber.vn">contact@bluecyber.vn</a></p>
+          <div class="text-[14px] sm:text-[16px] container sm:flex flex-row mx-auto mt-[93px] sm:mt-28 lg:px-5 md:px-4">
+            <div class="flex sm:inline-block sm:basis-1/4">
+              <h1 class="flex cursor-default">Email <p class="sm:hidden">&nbsp;:&nbsp;</p> </h1>
+              <p><a href="mailto:contact@bluecyber.vn">contact@bluecyber.vn</a></p>
             </div>
-            <div class="basis-1/4">
-              <h1 class="cursor-default">Phone</h1>
+            <div class="flex sm:inline-block sm:basis-1/4">
+              <h1 class="flex cursor-default">Phone <p class="sm:hidden">&nbsp;:&nbsp;</p></h1>
               <p><a href="tel:+4733378901">+47 333 78 901</a></p>
             </div>
-            <div class="basis-1/4 min">
-              <h1 class="cursor-default">Address</h1>
+            <div class="flex sm:inline-block sm:basis-1/4 min">
+              <h1 class="flex cursor-default">Address <p class="sm:hidden">&nbsp;:&nbsp;</p> </h1>
               <a href="https://www.google.com/maps/place/T%C3%B2a+nh%C3%A0+Kim+%C3%81nh/@21.0316611,105.7831278,18.52z/data=!4m15!1m8!3m7!1s0x3135ab4b3f7dca59:0x40eba4888f2cd814!2zTmfDtSA3OCBEdXkgVMOibiwgROG7i2NoIFbhu41uZyBI4bqtdSwgQ-G6p3UgR2nhuqV5LCBIw6AgTuG7mWksIFZp4buHdCBOYW0!3b1!8m2!3d21.0326451!4d105.7833219!16s%2Fg%2F1jkyv2bx9!3m5!1s0x3135abfe95ba0d93:0x8ab9e245cb41e1f0!8m2!3d21.0320335!4d105.7832347!16s%2Fg%2F11q9cqlpqw">
                 Số 1, ngõ 78, Duy Tân, Dịch Vọng Hậu, Cầu Giấy, Hà Nội
               </a>
             </div>
-            <div class="flex basis-1/4 flex-row">
+            <div class="flex my-1 sm:basis-1/4 flex-row">
               <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-5 w-5 basis-1/3 cursor-pointer"
@@ -843,7 +760,6 @@
               </svg>
             </div>
           </div>
-          
         </div>
       </div>
     </footer>
@@ -853,65 +769,94 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
   <script>
+    const emailInput = document.getElementById('emailInput');
+    const emailError = document.getElementById('emailError');
+    emailInput.addEventListener('input', function() {
+      const email = emailInput.value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+      if (emailRegex.test(email)) {
+        emailError.classList.add('hidden');
+      }else if(email == ""){
+        emailError.classList.add('hidden');
+      }
+       else {
+        emailError.classList.remove('hidden');
+      }
+    });
+  </script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxJNmUzPxPhyUUxpDzdAHFc5ikVudybLJGgAZjqKdnMkVw3g9S97R6oM3TngA3qpFzQ/exec'
+
+    const form = document.forms['contact-form']
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => alert("Thank you! your form is submitted successfully." ))
+      .then(() => { window.location.reload(); })
+      .catch(error => console.error('Error!', error.message))
+    })
+    const windowWidth = window.innerWidth
+    var element3 = document.getElementById("element3");
+    var waypoint = new Waypoint({
+      element: element3,
+      handler: function(direction) {
+        // Thêm lớp CSS để kích hoạt hiệu ứng hoạt hình
+        element.classList.add('animate__animated', 'animate__bounceIn');
+      },
+      offset: '100%', // Kích hoạt hiệu ứng hoạt hình khi phần tử được nhìn thấy 50% trên màn hình
+    });
+    if (windowWidth <= 768) { 
+        element3.classList.add('h-[260px]');
+      }
 
 
-var element3 = document.getElementById("element3");
-var waypoint = new Waypoint({
-  element: element3,
-  handler: function(direction) {
-    // Thêm lớp CSS để kích hoạt hiệu ứng hoạt hình
-    element.classList.add('animate__animated', 'animate__bounceIn');
-  },
-  offset: '100%', // Kích hoạt hiệu ứng hoạt hình khi phần tử được nhìn thấy 50% trên màn hình
-});
+    var element = document.getElementById('element');
 
+    var waypoint = new Waypoint({
+      element: element,
+      handler: function(direction) {
+        // Thêm lớp CSS để kích hoạt hiệu ứng hoạt hình
+        element.classList.add('animate__animated', 'animate__bounceIn',"animate__slow");
+      },
+      offset: '90%', // Kích hoạt hiệu ứng hoạt hình khi phần tử được nhìn thấy 50% trên màn hình
+    });
 
-var element = document.getElementById('element');
+    var element1 = document.getElementById('element1');
 
-var waypoint = new Waypoint({
-  element: element,
-  handler: function(direction) {
-    // Thêm lớp CSS để kích hoạt hiệu ứng hoạt hình
-    element.classList.add('animate__animated', 'animate__bounceIn',"animate__slow");
-  },
-  offset: '90%', // Kích hoạt hiệu ứng hoạt hình khi phần tử được nhìn thấy 50% trên màn hình
-});
+    var waypoint = new Waypoint({
+      element: element1,
+      handler: function(direction) {
+        // Thêm lớp CSS để kích hoạt hiệu ứng hoạt hình
+        element1.classList.add('animate__animated', 'animate__bounceIn','animate__slow-[1s]');
+        // element1.style.animationDelay = '1s';
+      },
+      offset: '100%', // Kích hoạt hiệu ứng hoạt hình khi phần tử được nhìn thấy 50% trên màn hình
+    });
 
-var element1 = document.getElementById('element1');
+    var element2 = document.getElementById('element2');
 
-var waypoint = new Waypoint({
-  element: element1,
-  handler: function(direction) {
-    // Thêm lớp CSS để kích hoạt hiệu ứng hoạt hình
-    element1.classList.add('animate__animated', 'animate__bounceIn','animate__slow-[1s]');
-    // element1.style.animationDelay = '1s';
-  },
-  offset: '100%', // Kích hoạt hiệu ứng hoạt hình khi phần tử được nhìn thấy 50% trên màn hình
-});
+    var waypoint = new Waypoint({
+      element: element2,
+      handler: function(direction) {
+        // Thêm lớp CSS để kích hoạt hiệu ứng hoạt hình
+        element2.classList.add('animate__animated', 'animate__backInRight');
+      },
+      offset: '100%', // Kích hoạt hiệu ứng hoạt hình khi phần tử được nhìn thấy 50% trên màn hình
+    });
 
-var element2 = document.getElementById('element2');
+    var myElement = document.getElementById('my-element');
 
-var waypoint = new Waypoint({
-  element: element2,
-  handler: function(direction) {
-    // Thêm lớp CSS để kích hoạt hiệu ứng hoạt hình
-    element2.classList.add('animate__animated', 'animate__backInRight');
-  },
-  offset: '100%', // Kích hoạt hiệu ứng hoạt hình khi phần tử được nhìn thấy 50% trên màn hình
-});
-
-var myElement = document.getElementById('my-element');
-
-var waypoint = new Waypoint({
-  element: myElement,
-  handler: function(direction) {
-    // Thêm lớp CSS để kích hoạt hiệu ứng hoạt hình
-    myElement.classList.add('animate__animated', 'animate__fadeInUp');
-  },
-  offset: '100%', // Kích hoạt hiệu ứng hoạt hình khi phần tử được nhìn thấy 50% trên màn hình
-   
-});
-
+    var waypoint = new Waypoint({
+      element: myElement,
+      handler: function(direction) {
+        // Thêm lớp CSS để kích hoạt hiệu ứng hoạt hình
+        myElement.classList.add('animate__animated', 'animate__fadeInUp');
+      },
+      offset: '100%', // Kích hoạt hiệu ứng hoạt hình khi phần tử được nhìn thấy 50% trên màn hình
+      
+    });
 
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 5,
@@ -930,11 +875,11 @@ var waypoint = new Waypoint({
         },
         // when window width is >= 640px
         640: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 7,
         },
         768: {
-          slidesPerView: 5,
+          slidesPerView: 3,
           spaceBetween: 7,
         },
         1024: {
@@ -963,7 +908,7 @@ var waypoint = new Waypoint({
       "./assets/img/IMG_6402.jpg",
       "./assets/img/IMG_6408.jpg",
       "./assets/img/IMG_6393.jpg",
-      "./assets/img/clients/9812.jpg"
+      "./assets/img/clients/IMG_9812.jpg"
     ];
     let index = 0;
     setInterval(function () {
