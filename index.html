@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
+    <link href="/public/output.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,7 +26,7 @@
     <header
       id="home" class="min-h-full lg:min-h-screen flex flex-col text-bc-text max-w-screen mx-auto bg-bc-primary"
     >
-      <nav class="bc-navbar bg-inherit relative" id="navbar">
+      <nav class="bc-navbar bg-inherit" id="navbar">
         <a
           class="flex flex-row justify-center items-center font-exo text-center text-2xl font-bold leading-6 cursor-pointer pl-4"
           onclick="scrollToSection('#home')"
@@ -69,7 +69,7 @@
           </ul>
         </div>
         <div class="action md:inline-block hidden"></div>
-        <div class="bc-mobile-navbar" id="mobile-navbar">
+        <div class="hidden bc-mobile-navbar" id="mobile-navbar">
           <ul class="">
             <li>
               <button id="nav-close">
@@ -90,14 +90,14 @@
               </button>
             </li>
             <li class="bc-nav-item text-center"><a href="#">Home</a></li>
-            <li class="bc-nav-item text-center"><a href="#about">About</a></li>
-            <li class="bc-nav-item text-center">
+            <li id="nav-close1" class="bc-nav-item text-center"><a href="#about">About</a></li>
+            <li id="nav-close2" class="bc-nav-item text-center">
               <a href="#services">Services</a>
             </li>
-            <li class="bc-nav-item text-center">
+            <li id="nav-close3" class="bc-nav-item text-center">
               <a href="#product">Product</a>
             </li>
-            <li class="bc-nav-item text-center">
+            <li id="nav-close4" class="bc-nav-item text-center">
               <a href="#contact">Contact</a>
             </li>
           </ul>
@@ -935,6 +935,18 @@
       .addEventListener("click", function () {
         mobileNav.classList.toggle("hidden");
       });
+    const closeNav1 = document.getElementById("nav-close1").addEventListener("click",function () {
+      mobileNav.classList.toggle("hidden")
+    })
+    const closeNav2 = document.getElementById("nav-close2").addEventListener("click",function () {
+      mobileNav.classList.toggle("hidden")
+    })
+    const closeNav3 = document.getElementById("nav-close3").addEventListener("click",function () {
+      mobileNav.classList.toggle("hidden")
+    })
+    const closeNav4 = document.getElementById("nav-close4").addEventListener("click",function () {
+      mobileNav.classList.toggle("hidden")
+    })
     const toggleNavbar = () => {
       if (window.scrollY > 0) {
         navbar.classList.add("scrolled");

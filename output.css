@@ -943,10 +943,6 @@ nav.scrolled a span {
   top: 320px;
 }
 
-.bottom-\[16px\] {
-  bottom: 16px;
-}
-
 .-z-50 {
   z-index: -50;
 }
@@ -1644,22 +1640,6 @@ nav.scrolled a span {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[\] {
-  width: ;
-}
-
-.w-\[99\%\] {
-  width: 99%;
-}
-
-.w-\[99\.9\%\] {
-  width: 99.9%;
-}
-
-.w-\[fu\] {
-  width: fu;
 }
 
 .min-w-0 {
@@ -3525,11 +3505,6 @@ select:-webkit-autofill:focus {
   right: -100px;
 }
 
-.after\:right-\[-101px\]::after {
-  content: var(--tw-content);
-  right: -101px;
-}
-
 .after\:clear-both::after {
   content: var(--tw-content);
   clear: both;
@@ -3550,39 +3525,9 @@ select:-webkit-autofill:focus {
   height: 64px;
 }
 
-.after\:h-\[65px\]::after {
-  content: var(--tw-content);
-  height: 65px;
-}
-
-.after\:h-\[66px\]::after {
-  content: var(--tw-content);
-  height: 66px;
-}
-
-.after\:h-\[67px\]::after {
-  content: var(--tw-content);
-  height: 67px;
-}
-
 .after\:w-\[64px\]::after {
   content: var(--tw-content);
   width: 64px;
-}
-
-.after\:w-\[65px\]::after {
-  content: var(--tw-content);
-  width: 65px;
-}
-
-.after\:w-\[66px\]::after {
-  content: var(--tw-content);
-  width: 66px;
-}
-
-.after\:w-\[67px\]::after {
-  content: var(--tw-content);
-  width: 67px;
 }
 
 .after\:rounded-full::after {
@@ -4882,10 +4827,6 @@ select:-webkit-autofill:focus {
     height: 100px;
   }
 
-  .sm\:h-\[50\%\] {
-    height: 50%;
-  }
-
   .sm\:h-\[500px\] {
     height: 500px;
   }
@@ -5205,22 +5146,6 @@ select:-webkit-autofill:focus {
     width: 72%;
   }
 
-  .lg\:w-\[45\%\] {
-    width: 45%;
-  }
-
-  .lg\:w-\[\] {
-    width: ;
-  }
-
-  .lg\:w-\[99\.99\] {
-    width: 99.99;
-  }
-
-  .lg\:w-\[99\.99\%\] {
-    width: 99.99%;
-  }
-
   .lg\:w-\[99\.9\%\] {
     width: 99.9%;
   }
@@ -5266,10 +5191,6 @@ select:-webkit-autofill:focus {
   .lg\:px-5 {
     padding-left: 6%;
     padding-right: 6%;
-  }
-
-  .lg\:pl-1 {
-    padding-left: 0.25rem;
   }
 
   .lg\:pl-2 {
@@ -5323,20 +5244,12 @@ select:-webkit-autofill:focus {
     left: 29px;
   }
 
-  .xl\:w-\[45\%\] {
-    width: 45%;
-  }
-
-  .xl\:w-\[99\.9\%\] {
-    width: 99.9%;
-  }
-
-  .xl\:w-\[\%\] {
-    width: %;
-  }
-
   .xl\:w-\[100\%\] {
     width: 100%;
+  }
+
+  .xl\:w-\[45\%\] {
+    width: 45%;
   }
 
   .xl\:-rotate-9 {
