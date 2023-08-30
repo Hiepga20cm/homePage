@@ -1234,6 +1234,14 @@ nav.scrolled a span {
   margin-top: 93px;
 }
 
+.mt-\[94px\] {
+  margin-top: 94px;
+}
+
+.mt-\[95px\] {
+  margin-top: 95px;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -4877,6 +4885,10 @@ select:-webkit-autofill:focus {
 
   .sm\:basis-3\/4 {
     flex-basis: 75%;
+  }
+
+  .sm\:cursor-default {
+    cursor: default;
   }
 
   .sm\:grid-cols-3 {
